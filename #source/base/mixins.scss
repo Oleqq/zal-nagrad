@@ -1,0 +1,46 @@
+@use "sass:math"; // Перемещаем @use на самое начало
+// Миксин для адаптивных значений
+@mixin adaptiveValue($property, $startSize, $minSize, $widthFrom: 1200px, $widthTo: 320px) {
+    // Проверка на то, чтобы размеры не были отрицательными
+    @if $minSize <= 0 {
+      $minSize: 0.0001;
+    }
+    @if $startSize <= 0 {
+      $startSize: 0.0001;
+    }
+  
+    // Преобразуем ширины в rem (по умолчанию 1 rem = 16px)
+    $startSizeRem: math.div($startSize, 16);
+    $minSizeRem: math.div($minSize, 16);
+    $widthFromRem: math.div($widthFrom, 16);
+    $widthToRem: math.div($widthTo, 16);
+  
+    // Формула для определения значений с использованием clamp
+    $slope: math.div($startSize - $minSize, $widthFrom - $widthTo);
+    $yIntersection: -$widthTo * $slope + $minSize;
+  
+    // Плавное изменение размера с использованием calc()
+    $flyValue: calc(#{$yIntersection} + #{$slope * 100} * 1vw);
+  
+    // Получаем финальное значение для свойства с использованием clamp()
+    $propertyValue: clamp(#{$minSizeRem}rem, #{$flyValue}, #{$startSizeRem}rem);
+  
+    // Применяем адаптивное значение с использованием медиазапросов
+    @media (min-width: $widthFrom) {
+      #{$property}: $startSize;
+    }
+  
+    @media (min-width: $widthTo) and (max-width: $widthFrom) {
+      @supports (#{$property}: #{$propertyValue}) {
+        #{$property}: $propertyValue;
+      }
+      @supports not (#{$property}: #{$propertyValue}) {
+        #{$property}: calc(#{$minSize} + (100vw - #{$widthTo}) * #{$slope});
+      }
+    }
+  
+    @media (max-width: $widthTo) {
+      #{$property}: $minSize;
+    }
+  }
+

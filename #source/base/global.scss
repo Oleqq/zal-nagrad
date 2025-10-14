@@ -1,0 +1,41 @@
+[class*="__container"] {
+    padding: 0 90px; 
+    margin: 0 auto; 
+    transition: .5s ease;
+
+    @media (min-width:1921px) {
+        padding: 0 220px;
+    }
+
+    @media (max-width:1660px) {
+        padding: 0 90px;
+    }
+    @media (max-width:991px) {
+        padding: 0 24px;
+    }
+}
+  
+.ease-in {
+    transition: .25s ease-in;
+}
+
+
+/* animation */
+section {
+    opacity: 0;
+    transition: 1s ease;
+    transform: translateY(50px);
+
+    &.hero {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+section.animated {
+    
+    opacity: 1;
+    transition: 1s ease;
+    transform: translateY(0px);
+
+
+}
