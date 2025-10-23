@@ -1,0 +1,32 @@
+section.services-overview
+    .services-overview__container 
+        div.breadcrumbs
+                    nav(aria-label="breadcrumb")
+                        ol.breadcrumbs__wrapper
+                            li.breadcrumbs__item
+                                a.breadcrumbs__link.breadcrumbs__prev(href="/") Главная
+                            span.breadcrumbs__divider
+                                | |
+
+                            li.breadcrumbs__item
+                                span.breadcrumbs__current Услуги
+
+        h2.section__title--big
+                    | услуги
+            
+        .services-overview__wrapper 
+            .services-overview-tiles
+                a.services-overview-card
+                    img(src="./assets/img/Mask group (12).png", alt="")
+                    .catalog-tiles-card__title 
+                        | индивидуальный дизайн
+
+                a.services-overview-card
+                    img(src="./assets/img/Mask group (13).png", alt="")
+                    .catalog-tiles-card__title 
+                        | Дополненная реальность
+
+                a.services-overview-card
+                    img(src="./assets/img/Mask group (14).png", alt="")
+                    .catalog-tiles-card__title 
+                        | оптовые заказы

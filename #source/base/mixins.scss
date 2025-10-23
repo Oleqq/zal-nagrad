@@ -44,3 +44,15 @@
     }
   }
 
+
+
+
+// ~~~ ~~~ ~~~ ACCORDION ~~~ ~~~ ~~~
+// Переменные
+$border-style: 1px solid #bbb;
+
+// Миксин для плавных переходов
+@mixin transition($property) {
+  transition: $property 200ms cubic-bezier(.4, 0, .2, 1);
+}
+

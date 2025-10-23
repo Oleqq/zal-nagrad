@@ -164,3 +164,94 @@ section.animated {
   }
 
 
+
+
+
+// accordion
+// Установка стандартных границ для аккордеона
+.accordion {
+    border: none;
+
+  .accordion-header {
+    border-bottom: 1px solid #000;
+    border-radius: 0px;
+  }
+}
+
+// Последний элемент аккордеона — добавляем нижнюю границу
+.accordion:last-of-type {
+  .accordion-content {
+    border-bottom: $border-style;
+    margin-bottom: 0;
+  }
+}
+
+// Скрываем чекбокс (переключатель)
+input[type='checkbox'] {
+  display: none;
+}
+
+// Стилизация заголовка / кнопки аккордеона
+.accordion-toggle {
+  display: block;
+  padding: 24px 0 24px 0;
+  cursor: pointer;
+  border-radius: 0;
+  @include transition(all);
+  position: relative;
+
+  &:hover {
+    
+  }
+}
+
+// Добавляем стрелку (указатель)
+.accordion-toggle::before {
+  content: '';
+  display: inline-block;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: 0.7rem;
+  transform: translateY(-2px);
+  @include transition(all);
+  right: 0;
+  bottom: 50%;
+  position: absolute;
+  font-size: 12px;
+}
+
+
+
+// Поворот стрелки при активном состоянии
+.toggle:checked + .accordion-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+// Скрываем содержимое при закрытом состоянии
+.accordion-content {
+  max-height: 0px;
+  overflow: hidden;
+}
+
+// Отображаем содержимое при открытом состоянии
+.toggle:checked + .accordion-toggle + .accordion-content {
+  max-height: 350px;
+}
+
+// Внутренние отступы для контента
+.accordion-content .accordion-content-inner {
+  padding: 24px;
+}
+
+// Переход и стили при раскрытом состоянии
+.accordion {
+  .toggle:checked + label + .accordion-content {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #000;
+    border-radius: 0px;
+    @include transition(margin-bottom);
+  }
+}
+

@@ -1,0 +1,108 @@
+.services-accordion {
+
+
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: normal;
+    color: #1c1c1c;
+
+    margin-bottom: 132px;
+    @include adaptiveValue(margin-bottom, 132px, 66px, 1920px, 767px);
+
+    h2 {
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 70px;
+        @include adaptiveValue(font-size, 70px, 32px, 1920px,767px);
+        line-height: 97%;
+        color: #1c1c1c;
+        max-width: 730px;
+
+        margin-bottom: 48px;
+        @include adaptiveValue(margin-bottom, 48px, 24px, 1920px, 767px);
+    }
+
+    p {
+        font-family: var(--font-family);
+        font-weight: 300;
+        font-size: 14px;
+        line-height: normal;
+        color: #1c1c1c;
+    }
+
+    &__container {
+
+    }
+    &__wrapper {
+        display: flex;
+
+        @media (max-width:767px) {
+            flex-direction: column;
+        }
+    }
+
+    &-accordion {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        & > p {
+            max-width: 580px;
+            margin-bottom: 32px;
+            @include adaptiveValue(margin-bottom, 32px, 18px, 1920px, 767px);
+
+        }
+    }
+
+    .accordion-content-inner {
+
+        position: relative;
+        &::after {
+            content: '';
+            display: flex;
+            width: 100%;
+            height: 1px;
+            background-color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        ul {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            
+
+
+            li {
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    background-color: #ffc242;
+                    left: -24px;
+                        top: 0;
+                }
+            }
+        }
+    }
+
+    
+}
+
+
+.accordion-header {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 36px;
+    @include adaptiveValue(font-size, 36px, 22px, 1920px, 767px);
+    line-height: normal;
+    color: #1c1c1c;
+}
