@@ -76,6 +76,7 @@
             @include adaptiveValue(font-size, 70px, 32px, 1920px,767px);
             line-height: 97%;
             color: #1c1c1c;
+            max-width: 730px;
 
             margin-bottom: 48px;
             @include adaptiveValue(margin-bottom, 48px, 24px, 1920px, 767px);

@@ -85,6 +85,7 @@
     font-weight: 300;
     font-size: 14px;
     color: #fff;
+    line-height: 84%;
   }
 
   &__link {
@@ -130,4 +131,10 @@ div.footer__col.footer__col--buyer > h3:nth-child(3) {
     body > footer > div.footer__inner.footer__container > div.footer__col.footer__col--buyer > h3:nth-child(3) {
         margin-top: 42px;
     }
+    
+}
+
+
+body > footer > div.footer__inner.footer__container > div.footer__col.footer__col--office > p {
+  margin-bottom: 16px;
 }
