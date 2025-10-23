@@ -3,6 +3,45 @@
     @include adaptiveValue(margin-bottom, 120px, 60px, 1920px, 767px);
 
 
+    &.product-line-secondary {
+
+        margin-bottom: 100px;
+        
+        @media (max-width:1440px) {
+            margin-bottom: 200px;
+        }
+        @media (max-width:767px) {
+            margin-bottom: 60px;
+        }
+
+        .product-line {
+
+            &__wrapper {
+                flex-direction: row;
+
+                @media (max-width:767px) {
+                    flex-direction: column;
+                }
+            }
+
+            &__top {
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+
+            &__bottom {
+                max-height: 240px;
+
+                @media (max-width:1440px) {
+                    grid-template-columns: 1fr 1fr;
+                }
+                @media (max-width:767px) {
+                    max-height: unset;
+                }
+            }
+        }
+    }
+
     &__container {
 
     }

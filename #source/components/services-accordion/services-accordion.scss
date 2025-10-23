@@ -10,6 +10,36 @@
     margin-bottom: 132px;
     @include adaptiveValue(margin-bottom, 132px, 66px, 1920px, 767px);
 
+
+    &-secondary {
+        .text {
+            transition: .2s ease;
+            max-width: 600px;
+            @media (max-width:1240px) {
+                max-width: 400px;
+            }
+            @media (max-width:767px) {
+                max-width: 100%;
+            }
+            p {
+                margin-bottom: 16px;
+            }
+        }
+
+        .services-accordion__wrapper {
+            gap: 60px;
+            @include adaptiveValue(gap, 60px, 30px, 1920px, 767px);
+            justify-content: space-between;
+
+            @media (max-width:767px) {
+                gap: 0;
+            }
+        }
+        .services-accordion-accordion {
+            max-width: 900px;
+        }
+    }
+
     h2 {
         font-family: var(--second-family);
         font-weight: 700;

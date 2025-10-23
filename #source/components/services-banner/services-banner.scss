@@ -1,0 +1,71 @@
+.services-banner {
+
+
+    margin-top: 110px;
+    margin-bottom: 50px;
+    @include adaptiveValue(margin-bottom, 50px, 24px, 1920px, 767px);
+
+    &__container {
+
+    }
+    &__wrapper {
+        position: relative;
+    }
+    &__img {
+        position: relative;
+        display: flex;
+        width: 100%;
+        
+
+
+
+        img {
+            object-fit: cover;
+            width: 100%;
+                height: 280px;
+            display: flex;
+            filter: grayscale(100);
+            
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #FFC242;
+            mix-blend-mode: multiply;
+            z-index: 10;
+        }
+    }
+
+    h1 {
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 133px;
+        @include adaptiveValue(font-size, 132px, 62px, 1920px, 767px);
+        @media (max-width:767px) {
+            @include adaptiveValue(font-size, 62px, 32px, 767px, 467px);
+        }
+        line-height: 79%;
+        color: #fff;
+    }
+
+    &__text {
+        position: absolute;
+        top: 48px;
+        @include adaptiveValue(top, 48px, 92px, 1920px, 467px);
+        left: 50px;
+        @include adaptiveValue(left, 50px, 24px, 1920px, 467px);
+        z-index: 15;
+
+        .breadcrumbs {
+            padding: 0 0 10px 0;
+        }
+        .breadcrumbs__current, .breadcrumbs__divider, .breadcrumbs__link {
+            color: #fff;
+        }
+        .breadcrumbs__item {
+            background-color: transparent;
+        }
+    }
+}

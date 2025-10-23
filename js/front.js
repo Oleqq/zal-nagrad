@@ -120,8 +120,40 @@ document.addEventListener('DOMContentLoaded', function() {
     sections.forEach(section => {
         observer.observe(section);
     });
-  });
+});
 
+document.addEventListener('DOMContentLoaded', function() {
+// Инициализация Swiper
+    const swiper = new Swiper('.services-swiper__wrapper', {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        loop: true,
+        speed: 600,
+        navigation: {
+            nextEl: '.services-swiper__button--next',
+            prevEl: '.services-swiper__button--prev',
+        },
+        breakpoints: {
+            1440: { slidesPerView: 4 },
+            1024: { slidesPerView: 4 },
+            768: { slidesPerView: 3 },
+            567: { slidesPerView: 2 },
+            480: { slidesPerView: 2 },
+            367: { slidesPerView: 1 },
+            0: { slidesPerView: 1 },
+        }
+    });
+
+    // FancyBox уже автоматически инициализируется на [data-fancybox="gallery"]
+    // Можно добавить дополнительные опции:
+    Fancybox.bind("[data-fancybox='gallery']", {
+        Thumbs: false,
+        Toolbar: true,
+        animated: true,
+        showClass: "fancybox-fadeIn",
+        hideClass: "fancybox-fadeOut",
+    });
+});
 
 
 
