@@ -1,0 +1,80 @@
+.product-line {
+    margin-bottom: 120px;
+    @include adaptiveValue(margin-bottom, 120px, 60px, 1920px, 767px);
+
+
+    &__container {
+
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+        @include adaptiveValue(gap, 70px, 30px, 1920px, 567px);
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        @media (max-width:767px) {
+            flex-direction: column;
+        }
+        h2 {
+          font-family: var(--second-family);
+            font-weight: 700;
+            font-size: 70px;
+            @include adaptiveValue(font-size, 70px, 32px, 1920px,767px);
+            line-height: 97%;
+            color: #1c1c1c;  
+        }
+        p {
+                font-family: var(--font-family);
+                font-weight: 300;
+                font-size: 14px;
+                color: #1c1c1c;
+        }
+    }
+    &__bottom {
+        display: flex;
+        gap: 14px;
+
+        @media (max-width:1440px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @media (max-width:567px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    &__badge {
+        background: rgba(28, 28, 28, 0.04);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+
+        padding: 28px 36px;
+
+        @include adaptiveValue(padding-left, 36px, 12px, 1920px, 767px);
+        @include adaptiveValue(padding-right, 36px, 12px, 1920px, 767px);
+
+
+        svg {
+
+            @media (max-width:1280px) {
+                width: 42px;
+                height: 42px;
+            }
+        }
+
+
+        p {
+            font-family: var(--font-family);
+            font-weight: 300;
+            font-size: 14px;
+            text-align: center;
+            color: #1c1c1c;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+
+        link(rel="stylesheet", href="./css/style.css")
+    body 
+
+
+        //- Header
+        include ../components/header/header.pug
+        
+        main 
+            //- catalog-
+            include ../components/catalog-tiles/catalog-tiles.pug
+
+            //- product-line
+            include ../components/product-line/product-line.pug
+
+            //- why-us
+            include ../components/why-us/why-us.pug
+
+            //- for-who
+            include ../components/for-who/for-who.pug
+            
+        //- Footer
+        include ../components/footer/footer.pug
+
+        script(src="./js/front.js") 

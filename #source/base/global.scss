@@ -39,3 +39,128 @@ section.animated {
 
 
 }
+
+
+
+.breadcrumbs {
+    padding-top: 160px;
+    padding-bottom: 12px;
+    @media (max-width:467px) {
+        padding-top: 80px;    
+    }
+}
+.breadcrumbs__wrapper {
+
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 16px;
+    color: var(--gray-50);
+
+    list-style: none;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 4px;
+    row-gap: 1rem;
+
+   
+    
+    
+    @media (max-width:467px) {
+      font-size: 16px;
+    }
+    @media (max-width:420px) {
+        font-size: 14px;
+    }
+    @media (max-width:375px) {
+        font-size: 12px;
+    }
+
+
+    &__container {
+        nav {
+            display: flex;
+            justify-content: center;
+
+            @media (max-width:1660px) {
+                justify-content: flex-start;
+            }
+            
+        }
+    }
+
+    li {
+        background-color: #fff;
+        width: fit-content;
+
+        &:last-of-type {
+            
+            
+
+            background-color: unset;
+
+            // @media (max-width:991px) {
+            //     width: 100%;
+            //     flex: unset;
+            // }
+
+            img {
+                
+            }
+
+            a {
+                background-color: #fff;
+            }
+        }
+    }
+    
+
+    a {
+        
+        font-family: var(--font-family);
+        font-weight: 300;
+        
+        color: var(--gray-50);
+
+        line-height: 32px !important;
+        text-decoration: none;
+
+        transition: .2s ease;
+        
+
+        @media (max-width:991px) {
+            line-height: unset !important;
+        }
+        
+
+        &:hover {
+            transition: .2s ease;
+            color: var(--dark-blue);
+            text-shadow: 0 0 .75px var(--dark-blue); /* Тень текста */
+
+            border: none;
+        }
+    }
+  
+    &__item {
+      display: flex;
+      gap: 10px;
+      transition: .2s ease-in;
+    }
+    &__item:hover {
+        transition: .2s ease-in;
+    }
+    &__divider {
+      
+    }
+    &__current {
+        
+    }
+
+  }
+
+

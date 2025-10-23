@@ -66,11 +66,39 @@
     // ~~~~~~~ Styles for index.html END ~~~~~~~
 
 
+h2.section__title--big {
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 133px;
+        @include adaptiveValue(font-size, 133px, 72px, 1920px, 767px);
+        line-height: 79%;
+        color: #1c1c1c;
+        margin-bottom: 52px;
+        @include adaptiveValue(margin-bottom, 52px, 32px, 1920px, 767px);
+}
+    
 
+// catalog
 
+    // catalog-tiles
+    @import "../components/catalog-tiles/catalog-tiles";
+
+    // 
+    @import "../components/product-line/product-line";
+
+    // why-us
+    @import "../components/why-us/why-us";
+
+    // 
+    @import "../components/for-who/for-who";
 // temporary
 // @media (max-width:1240px) {
 //     .index-news {
 //         display: none;
 //     }
 // }
+
+
+// blog-overview
+    // blog-overview
+    @import "../components/blog-overview/blog-overview";

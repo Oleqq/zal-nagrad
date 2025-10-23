@@ -228,6 +228,10 @@ header {
         display: flex;
         justify-content: center;
 
+        @media (max-width:1240px) {
+            display: none;
+        }
+
         &-list {
             display: flex;
             gap: 50px;
