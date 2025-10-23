@@ -1,0 +1,98 @@
+.blog-post {
+
+    margin-top: 62px;
+    @include adaptiveValue(margin-top, 62px, 32px, 1920px, 1440px);
+
+    margin-bottom: 126px;
+    @include adaptiveValue(margin-bottom, 126px, 64px, 1920px, 767px);
+
+    &__container {
+        
+    }
+    &__wrapper {
+        display: flex;
+        gap: 136px;
+
+        @include adaptiveValue(gap, 136px, 68px, 1920px, 1440px);
+
+        @media (max-width:1380px) {
+            flex-direction: column;
+        }
+        @media (max-width:567px) {
+            gap: 42px;
+        }
+    }
+    &__img {
+        display: flex;
+        width: 100%;
+        position: relative;
+
+        max-width: 670px;
+        transition: 1s ease;
+
+        @media (max-width:1380px) {
+            max-width: 100%;
+            aspect-ratio: 16 / 5;
+        }
+        @media (max-width:1024px) {
+            aspect-ratio: 16 / 9 ;
+        }
+        @media (max-width:767px) {
+            aspect-ratio: 4 / 3;
+        }
+
+        img {
+            display: flex;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        &-badge {
+            display: flex;
+            font-family: var(--font-family);
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 157%;
+            text-align: center;
+            color: #1c1c1c;
+            padding: 8px 16px;
+            background-color: #fff;
+
+            position: absolute;
+            right: 32px;
+            top: 32px;
+        }
+
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        h2 {
+            font-family: var(--second-family);
+            font-weight: 700;
+            font-size: 70px;
+            @include adaptiveValue(font-size, 70px, 32px, 1920px,767px);
+            line-height: 97%;
+            color: #1c1c1c;
+
+            margin-bottom: 48px;
+            @include adaptiveValue(margin-bottom, 48px, 24px, 1920px, 767px);
+        }
+        p {
+            font-family: var(--font-family);
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 229%;
+            color: #1c1c1c;
+
+            margin-bottom: 32px;
+            @include adaptiveValue(margin-bottom, 32px, 16px, 1920px, 767px);
+        }
+
+        .blog-post__btn {
+            margin-top: auto;
+        }
+    }
+}

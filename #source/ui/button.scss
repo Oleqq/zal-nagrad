@@ -1,0 +1,20 @@
+a.ui-button {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            text-align: center;
+            color: #1c1c1c;
+
+            padding: 24px 24px;
+            @include adaptiveValue(padding-top, 24px, 12px, 1920px, 767px);
+            @include adaptiveValue(padding-left, 24px, 12px, 1920px, 767px);
+            @include adaptiveValue(padding-right, 24px, 12px, 1920px, 767px);
+            @include adaptiveValue(padding-bottom, 24px, 12px, 1920px, 767px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            text-decoration: none;
+            background-color: #ffc242;
+          }

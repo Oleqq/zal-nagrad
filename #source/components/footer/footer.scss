@@ -1,0 +1,133 @@
+.footer {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  font-size: 14px;
+  @media (max-width:467px) {
+    padding-top: 42px;
+  }
+
+  margin: 0 90px 90px;
+
+  @media (max-width:1380px) {
+    margin: 0;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1 1 180px;
+    min-width: 160px;
+
+    &--brand {
+      flex: 1 1 220px;
+    }
+
+    &--contacts {
+        gap: 36px;
+    }
+  }
+
+  &__logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+
+    span {
+      color: #f5b51d;
+    }
+
+    &-desktop {
+        @media (max-width:467px) {
+            display: none;
+        }
+    }
+    &-mobile {
+        display: none;
+        @media (max-width:467px) {
+            display: block;
+        }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 25px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  &__text,
+  &__link,
+  &__item,
+  &__policy {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 14px;
+    color: #fff;
+  }
+
+  &__link {
+    text-decoration: none;
+
+    &:hover {
+      color: #f5b51d;
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    
+    border-radius: 3px;
+    display: inline-block;
+  }
+}
+div.footer__col.footer__col--buyer > h3:nth-child(3) {
+    margin-top: auto;
+}
+
+.footer__bottom {
+    justify-content: unset;
+
+    @media (max-width:767px) {
+        gap: 12px;
+        margin-top: 42px;
+    }
+
+    .footer__col {
+            max-width: 251px;
+    }
+}
+
+@media (max-width:467px) {
+    body > footer > div.footer__inner.footer__container > div.footer__col.footer__col--buyer > h3:nth-child(3) {
+        margin-top: 42px;
+    }
+}

@@ -1,0 +1,46 @@
+div.breadcrumbs
+    .breadcrumbs__container
+                nav(aria-label="breadcrumb")
+                    ol.breadcrumbs__wrapper
+                        li.breadcrumbs__item
+                            a.breadcrumbs__link.breadcrumbs__prev(href="/") Главная
+                        span.breadcrumbs__divider
+                            | |
+
+                        li.breadcrumbs__item
+                            span.breadcrumbs__current Контакты
+
+section.contacts
+    .contacts__container 
+        h2.section__title--big
+            | контакты
+
+        .contacts__wrapper 
+            .contacts-map 
+                img(src="./assets/img/Group 229.png", alt="")
+            .contacts-info
+                .contacts-info__address
+                    p.contacts-info__title Адрес офиса продаж:
+                    p.contacts-info__text 690024, Приморский край, Владивосток, улица Маковского 284, офис 343
+                    p.contacts-info__text
+                        | Тел.: 
+                        a.contacts-info__link(href="tel:+79140719784") +7 914 071-97-84
+                    p.contacts-info__text
+                        | E-mail: 
+                        a.contacts-info__link(href="mailto:zakaz@nagradasport.ru") zakaz@nagradasport.ru
+
+                    .contacts-info__schedule
+                    p.contacts-info__title График работы:
+                    table.contacts-info__table
+                        thead
+                        tr
+                            th График работы:
+                        tbody
+                        tr
+                            td Пн–Пт
+                            td с 10:00 до 18:00
+                        tr
+                            td Сб
+                            td с 10:00 до 15:00
+            
+    

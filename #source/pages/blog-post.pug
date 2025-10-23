@@ -6,26 +6,22 @@ html(lang="en")
         title Document
 
         link(rel="stylesheet", href="./css/style.css")
-    body(style="background-color: #0f0f0f;") =
+    body 
 
 
         //- Header
         include ../components/header/header.pug
         
         main 
-            //- Hero
-            include ../components/hero/hero.pug
-
-            //- //- index-news
-            //- include ../components/index-news/index-news.pug
-
             
-
-
-
+            //- blog-post
+            include ../components/blog-post/blog-post.pug
             
-
         //- Footer
         include ../components/footer/footer.pug
 
         script(src="./js/front.js") 
+
+
+
+        
