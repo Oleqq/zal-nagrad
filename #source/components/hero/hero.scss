@@ -5,6 +5,17 @@
   text-align: center;
   animation: fadeIn 1s ease-out;
 
+  .logo {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 80px;
+    @include adaptiveValue(margin-bottom, 80px, 40px, 1920px, 567px);  
+    display: none;
+  }
+
   &__header {
     margin-bottom: 50px;
   }
@@ -12,10 +23,20 @@
   &__title {
     font-family: var(--second-family);
     font-weight: 700;
-    font-size: 28px;
+     @include adaptiveValue(font-size, 73px, 42px, 1920px, 567px);
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 10px;
+
+    &.secondary {
+           
+            line-height: 144%;
+
+            color: transparent; 
+            -webkit-text-stroke: 1px #FFC242; 
+            text-stroke: 1px #FFC242; 
+            paint-order: stroke fill; 
+    }
   }
 
   &__subtitle {

@@ -1620,16 +1620,80 @@ body > footer > div.footer__inner.footer__container > div.footer__col.footer__co
   -webkit-animation: fadeIn 1s ease-out;
           animation: fadeIn 1s ease-out;
 }
+.preview-links .logo {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 80px;
+  display: none;
+}
+@media (min-width: 1920px) {
+  .preview-links .logo {
+    margin-bottom: 80px;
+  }
+}
+@media (min-width: 567px) and (max-width: 1920px) {
+  @supports (margin-bottom: clamp(2.5pxrem, calc(23.2372505543px + 2.9563932003 * 1vw), 5pxrem)) {
+    .preview-links .logo {
+      margin-bottom: clamp(2.5pxrem, calc(23.2372505543px + 2.9563932003 * 1vw), 5pxrem);
+    }
+  }
+  @supports not (margin-bottom: clamp(2.5pxrem, calc(23.2372505543px + 2.9563932003 * 1vw), 5pxrem)) {
+    .preview-links .logo {
+      margin-bottom: calc(40px + (100vw - 567px) * 0.029563932);
+    }
+  }
+}
+@media (max-width: 567px) {
+  .preview-links .logo {
+    margin-bottom: 40px;
+  }
+}
 .preview-links__header {
   margin-bottom: 50px;
 }
 .preview-links__title {
   font-family: var(--second-family);
   font-weight: 700;
-  font-size: 28px;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 10px;
+}
+@media (min-width: 1920px) {
+  .preview-links__title {
+    font-size: 73px;
+  }
+}
+@media (min-width: 567px) and (max-width: 1920px) {
+  @supports (font-size: clamp(2.625pxrem, calc(29.0088691796px + 2.2912047302 * 1vw), 4.5625pxrem)) {
+    .preview-links__title {
+      font-size: clamp(2.625pxrem, calc(29.0088691796px + 2.2912047302 * 1vw), 4.5625pxrem);
+    }
+  }
+  @supports not (font-size: clamp(2.625pxrem, calc(29.0088691796px + 2.2912047302 * 1vw), 4.5625pxrem)) {
+    .preview-links__title {
+      font-size: calc(42px + (100vw - 567px) * 0.0229120473);
+    }
+  }
+}
+@media (max-width: 567px) {
+  .preview-links__title {
+    font-size: 42px;
+  }
+}
+.preview-links__title.secondary {
+  line-height: 144%;
+  color: transparent;
+  -webkit-text-stroke: 1px #FFC242;
+  text-stroke: 1px #FFC242;
+  paint-order: stroke fill;
 }
 .preview-links__subtitle {
   font-family: var(--font-family);
