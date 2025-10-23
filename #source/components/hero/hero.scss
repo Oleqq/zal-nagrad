@@ -19,8 +19,8 @@
   }
 
   &__subtitle {
-     font-family: var(--second-family);
-    font-size: 16px;
+    font-family: var(--font-family);
+    font-size: 14px;
     color: #fff;
   }
 
@@ -50,9 +50,11 @@
     gap: 8px;
 
     &:hover {
+      transition: .2s ease;
       border-color: #ffcc00;
       background: rgba(255, 204, 0, 0.1);
       transform: translateY(-4px);
+      box-shadow: 1px 1px 52px #ffcc0044;
       .preview-links__arrow {
         transform: translateX(5px);
         color: #ffcc00;
@@ -62,6 +64,14 @@
     &.done {
         background-color: #FFC242;
         color: #0f0f0f;
+        transition: .2s ease;
+
+        &:hover {
+            transition: .2s ease;
+            background: rgba(255, 255, 255, 0.03);
+            color: #FFC242;
+            box-shadow: 1px 1px 52px #ffffff44;
+        }
     }
   }
 

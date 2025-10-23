@@ -111,6 +111,9 @@ header {
             
         }
 
+        position: relative;
+        top: 8px;
+
         .tablet-logo {
             display: none;
         }
@@ -219,6 +222,10 @@ header {
 
         gap: 50px;
         @include adaptiveValue(gap, 50px, 8px, 1920px, 467px);
+
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
 
         @media (max-width:767px) {
             display: none;
