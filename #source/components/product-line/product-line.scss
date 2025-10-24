@@ -5,7 +5,7 @@
 
     &.product-line-secondary {
 
-        margin-bottom: 100px;
+        margin-bottom: 150px;
         
         @media (max-width:1440px) {
             margin-bottom: 200px;
@@ -19,7 +19,8 @@
             &__wrapper {
                 flex-direction: row;
 
-                @media (max-width:767px) {
+
+                @media (max-width:1660px) {
                     flex-direction: column;
                 }
             }
@@ -31,11 +32,15 @@
 
             &__bottom {
                 max-height: 240px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
 
-                @media (max-width:1440px) {
-                    grid-template-columns: 1fr 1fr;
+                @media (max-width:1660px) {
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    max-height: unset;
                 }
                 @media (max-width:767px) {
+                    grid-template-columns: 1fr 1fr;
                     max-height: unset;
                 }
             }

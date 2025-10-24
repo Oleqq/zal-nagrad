@@ -99,7 +99,7 @@ header {
     .burger-menu {
         display: none;
 
-        @media (max-width:767px) {
+        @media (max-width:1440px) {
             display: flex;
         }
     }
@@ -235,14 +235,14 @@ header {
         display: flex;
         justify-content: center;
 
-        @media (max-width:1240px) {
+        @media (max-width:1440px) {
             display: none;
         }
 
         &-list {
             display: flex;
             gap: 50px;
-            @include adaptiveValue(gap, 50px, 8px, 1920px, 467px);
+            @include adaptiveValue(gap, 50px, 16px, 1920px, 1440px);
         }
         &-item {
 
