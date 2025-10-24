@@ -1,0 +1,39 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+        script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+
+       
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css")
+        script(src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js")
+
+
+        link(rel="stylesheet", href="./css/style.css")
+    body 
+
+
+        //- Header
+        include ../components/header/header.pug
+        
+        main 
+            //- services-banner
+            include ../components/services-banner/services-banner-about-us.pug
+
+            //- about-company
+            include ../components/about-company/about-company.pug
+
+            //- services-overview
+            include ../components/team-swiper/team-swiper.pug
+
+            //- company-history
+            include ../components/company-history/company-history.pug
+
+        //- Footer
+        include ../components/footer/footer.pug
+
+        script(src="./js/front.js") 

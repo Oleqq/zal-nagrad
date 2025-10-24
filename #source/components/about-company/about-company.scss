@@ -1,0 +1,113 @@
+.about-company {
+
+
+    h2 {
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 70px;
+        @include adaptiveValue(font-size, 70px, 32px, 1920px,767px);
+        line-height: 97%;
+        color: #1c1c1c;  
+
+
+        margin-bottom: 56px;
+        @include adaptiveValue(margin-bottom, 56px, 24px, 1920px, 767px);
+    }
+
+    h3 {
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 33px;
+        @include adaptiveValue(font-size, 33px, 24px, 1920px,767px);
+        color: #000;
+        margin-bottom: 36px;
+    }
+
+    p {
+        font-family: var(--font-family);
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 157%;
+        color: #1c1c1c;
+        margin-bottom: 16px;
+    }
+
+    .ui-button {
+        margin-top: 56px;
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: 100px;
+        @include adaptiveValue(gap, 100px, 56px, 1920px, 767px);
+
+        @media (max-width:991px) {
+            flex-direction: column;
+        }
+    }
+
+    &__text {
+        max-width: 700px;
+    }
+
+    &__info {
+        max-width: 900px;
+    }
+
+    .product-line__bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        @media (max-width:567px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+    }
+     .product-line__badge.img {
+        @media (max-width:567px) {
+            grid-column: 1 / -1;
+        }
+     }
+    
+    .product-line__badge {
+        background-color: transparent;
+
+    }
+    .product-line__badge:hover {
+    -webkit-transition: 0.2s 
+    ease;
+        transition: 0.2s 
+    ease;
+        background-color: #FFC242;
+        color: #FFC242;
+    }
+    .product-line__badge img {
+        width: 189px;
+        height: 277px;
+        object-fit: cover;
+
+        @media (max-width:567px) {
+            width: 150px;
+            height: 220px;
+        }
+    }
+        .product-line__badge {
+            padding: 0;
+        }
+    @media (max-width:1240px) {
+        
+    }
+
+    .why-us__bottom {
+        gap: 12px;
+        margin-bottom: 56px;
+        @include adaptiveValue(margin-bottom, 56px, 56px, 1920px, 767px);
+
+        @media (max-width:1024px) {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    .why-us-step__text {
+        max-width: 280px;
+    }
+}

@@ -55,7 +55,7 @@
 
   &__table {
     width: 100%;
-    max-width: 280px;
+    max-width: 340px;
     border-collapse: collapse;
     margin-top: 16px;
 
@@ -64,6 +64,10 @@
     font-weight: 300;
     font-size: 18px;
     color: #000;
+
+    tr {
+      display: flex;
+    }
 
     th,
     td {

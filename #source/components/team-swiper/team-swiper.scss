@@ -1,0 +1,15 @@
+.team-swiper {
+
+
+    h2 {
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 70px;
+        @include adaptiveValue(font-size, 70px, 32px, 1920px,767px);
+        line-height: 97%;
+        color: #1c1c1c;  
+
+
+        margin-bottom: 44px;
+    }
+}

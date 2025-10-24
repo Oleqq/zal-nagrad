@@ -62,3 +62,68 @@
         }
     }
 }
+
+
+.usage-order-guide {
+    h2 {
+        margin-bottom: 56px;
+        @include adaptiveValue(margin-bottom, 56px, 24px, 1920px, 767px);
+    }
+    h3 {
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 33px;
+        color: #000;
+    }
+
+    .usage__wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+        @media (max-width:676px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width:467px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .usage-card {
+        display: flex;
+        justify-content: flex-start;
+        padding: 42px;
+        text-align: left;
+
+        @include adaptiveValue(padding-top, 42px, 24px, 1920px, 767px);
+        @include adaptiveValue(padding-right, 42px, 24px, 1920px, 767px);
+        @include adaptiveValue(padding-bottom, 42px, 24px, 1920px, 767px);
+        @include adaptiveValue(padding-left, 42px, 24px, 1920px, 767px);
+
+        h3 {
+            text-align: left;
+            margin-bottom: 32px;
+        }
+        p {
+            text-align: left;
+
+            font-family: var(--font-family);
+            font-weight: 300;
+            font-size: 14px;
+            color: #000;
+            text-transform: none;
+        }
+    }
+}
+.usage-order-guide-card {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width:676px) {
+        grid-column: 1 / -1;
+    }
+
+    p {
+        font-family: var(--font-family);
+        font-weight: 300;
+        font-size: 14px;
+        color: #000;
+    }
+}
