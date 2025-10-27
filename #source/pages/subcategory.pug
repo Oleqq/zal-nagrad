@@ -1,0 +1,47 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+
+        
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+        script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+
+        link(rel="stylesheet", href="./css/style.css")
+    body
+
+
+        //- Header
+        include ../components/header/header.pug
+        
+        main 
+            //- services-banner-category.pug
+            include ../components/services-banner/services-banner-category.pug
+
+         
+            //- catalog
+            include ../components/catalog/catalog.pug
+
+
+            //- recent-products
+            include ../components/recent-products/recent-products.pug
+
+            //- text-section
+            include ../components/text-section/text-section.pug
+
+
+            //- why-us.pug
+            include ../components/why-us/why-us-catalog.pug
+            
+
+            
+
+        //- Footer
+        include ../components/footer/footer.pug
+
+        script(src="./js/front.js") 
+
+
+

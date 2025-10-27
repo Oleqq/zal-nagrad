@@ -122,6 +122,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const recentSlider = new Swiper('.recent-product__slider', {
+    // modules: [Navigation],
+    slidesPerView: 4,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.recent-product__next',
+      prevEl: '.recent-product__prev',
+    },
+    breakpoints: {
+      320: { slidesPerView: 1.2, spaceBetween: 16 },
+      576: { slidesPerView: 2, spaceBetween: 20 },
+      992: { slidesPerView: 3, spaceBetween: 24 },
+      1280: { slidesPerView: 4, spaceBetween: 30 },
+    },
+  });
+});
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
 // Инициализация Swiper
     const swiper = new Swiper('.services-swiper__wrapper', {
@@ -153,6 +173,24 @@ document.addEventListener('DOMContentLoaded', function() {
         showClass: "fancybox-fadeIn",
         hideClass: "fancybox-fadeOut",
     });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const resetBtn = document.querySelector('.catalog-filters__reset');
+  resetBtn?.addEventListener('click', () => {
+    document.querySelector('.catalog-filters').reset();
+  });
+
+  // Простая имитация пагинации
+  const pages = document.querySelectorAll('.catalog-pagination__item');
+  pages.forEach(page => {
+    page.addEventListener('click', () => {
+      pages.forEach(p => p.classList.remove('active'));
+      page.classList.add('active');
+    });
+  });
 });
 
 

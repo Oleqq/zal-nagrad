@@ -1,0 +1,291 @@
+.catalog {
+  margin-bottom: 120px;
+  @include adaptiveValue(margin-bottom, 120px, 90px, 1920px, 767px);
+
+  &__layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    @include adaptiveValue(gap, 40px, 20px, 1920px, 767px);
+    @media (max-width:676px) {
+        display: flex;
+        flex-direction: column;
+    }
+  }
+
+  &__count {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 14px;
+    margin-bottom: 54px;
+    @include adaptiveValue(margin-bottom, 54px, 24px, 1920px, 767px);
+  }
+}
+
+.catalog-filters {
+  background: #fff;
+//   border: 1px solid #ddd;
+  padding: 20px;
+
+  &__title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    margin:  0 0 20px 0;
+    font-size: 36px;
+    @include adaptiveValue(font-size, 28px, 24px, 1920px, 767px);
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .catalog-filters__item {
+        margin-bottom: 14px;
+    }
+
+    label {
+        font-family: var(--font-family);
+        font-size: 14px;
+        @include adaptiveValue(font-size, 14px, 12px, 1920px, 767px);
+        font-weight: 300;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+
+        input {
+            width: 10px;
+            height: 10px;
+            background-color: #ffc242;
+            border-radius: 100%;
+        }
+    }
+  }
+
+  &__range {
+        
+    display: none;
+      margin-top: 10px;
+
+    input[type="range"] {
+        width: 100%;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-family);
+    span {
+        font-weight: 500;
+    }
+
+    &-input {
+        width: 100%;
+      padding: 12px;
+      background: rgba(28, 28, 28, 0.04);
+      outline: none;
+      border: none;
+     
+      font-family: var(--font-family);
+
+      &::placeholder {
+        font-family: var(--font-family);
+      }
+    }
+
+    
+    
+  }
+
+  &__btn {
+    width: 100%;
+    background: #f6b300;
+    border: none;
+    color: #000;
+    padding: 24px 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: var(--font-family);
+  }
+
+  &__reset {
+    width: 100%;
+    border: 1px solid #000;
+    background: none;
+    padding: 24px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: var(--font-family);
+  }
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 32px;
+  @include adaptiveValue(column-gap, 32px, 24px, 1920px, 767px);
+  row-gap: 90px;
+  @include adaptiveValue(row-gap, 90px, 60px, 1920px, 767px);
+
+  margin-bottom: 160px;
+  @include adaptiveValue(margin-bottom, 160px, 120px, 1920px, 767px);
+
+  @media (max-width:1920px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media (max-width:1280px) {
+    grid-template-columns: 1fr 1fr;    
+  }
+  @media (max-width:991px) {
+    grid-template-columns: 1fr;
+  }
+  @media (max-width:676px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width:390px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.catalog-card {
+  position: relative;
+  background: rgba(28, 28, 28, 0.04);
+  padding: 24px 42px 38px 42px;
+  @include adaptiveValue(padding-top, 24px, 12px, 1920px, 767px);
+  @include adaptiveValue(padding-right, 42px, 12px, 1920px, 767px);
+  @include adaptiveValue(padding-bottom, 38px, 24px, 1920px, 767px);
+  @include adaptiveValue(padding-left, 42px, 12px, 1920px, 767px);
+  text-align: center;
+  position: relative;
+
+  
+  
+
+  &__img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+
+    aspect-ratio: 16 / 9;
+     object-fit: contain;
+  }
+
+  &__badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #f6b300;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-family: var(--font-family);
+
+    &--hit {
+      right: 60px;
+      background: #000;
+      color: #fff;
+    }
+  }
+
+  &__code {
+    font-size: 12px;
+    color: #888;
+    text-align: left;
+    font-family: var(--font-family);
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 18px;
+    @include adaptiveValue(font-size, 18px, 16px, 1920px, 767px);
+    text-transform: capitalize;
+    color: #000;
+    margin: 10px 0 24px 0;
+    text-align: left;
+    @include adaptiveValue(margin-bottom, 24px, 12px, 1920px, 767px);
+  }
+
+  &__price {
+    font-size: 18px;
+    @include adaptiveValue(font-size, 18px, 16px, 1920px, 767px);
+    text-align: left;
+    font-family: var(--font-family);
+    font-weight: 300;
+    text-transform: capitalize;
+    color: #000;
+
+    @media (max-width:467px) {
+        font-size: 12px;
+    }
+
+    &-old {
+      text-decoration: line-through;
+      margin-right: 5px;
+      color: #888;
+    }
+  }
+
+  &__add {
+    margin-top: 10px;
+    width: 64px;
+    height: 64px;
+    border: none;
+    background: #f6b300;
+    font-size: 36px;
+    cursor: pointer;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: -32px;
+    @include adaptiveValue(width, 64px, 32px, 1920px, 767px);
+    @include adaptiveValue(height, 64px, 32px, 1920px, 767px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width:991px) {
+        bottom: -16px;
+    }
+  }
+}
+
+.catalog-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+
+  &__list {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+  }
+
+  &__item {
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    &.active {
+      background: #000;
+      color: #fff;
+    }
+  }
+
+  &__btn {
+    border: none;
+    background: none;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: var(--font-family);
+  }
+}

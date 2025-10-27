@@ -1,0 +1,67 @@
+h2.recent-product__title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 133px;
+    @include adaptiveValue(font-size, 132px, 62px, 1920px, 767px);
+    @media (max-width:767px) {
+        @include adaptiveValue(font-size, 62px, 32px, 767px, 467px);
+    }
+    line-height: 79%;
+    color: #000;    
+
+    
+}
+.recent-product {
+    margin-bottom: 150px;
+
+    &__header {
+        margin-bottom: 42px;
+        @include adaptiveValue(margin-bottom, 42px, 24px);
+    }
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        pointer-events: none;
+
+        z-index: 10;
+
+        max-width: 90vw;
+        margin: 0 auto;
+
+        button {
+            pointer-events: auto;
+            background: transparent;
+            border: none;
+            outline: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s;
+
+
+
+            &:hover {
+                background: #000;
+                color: #fff;
+            }
+            }
+    }
+}
+
+.recent-product__slider {
+    .catalog-card { 
+        padding-bottom: 100px;
+    }
+    .catalog-card__add {
+        bottom: 20px;
+    }
+}

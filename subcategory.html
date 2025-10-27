@@ -6,11 +6,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
     <link rel="stylesheet" href="./css/style.css">
   </head>
-  <body> 
+  <body>
     <header class="header"> 
       <div class="header__container"> 
         <div class="header__wrapper"> 
@@ -118,30 +116,312 @@
       </div>
     </header>
     <main> 
-      <div class="breadcrumbs">
-        <div class="breadcrumbs__container">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumbs__wrapper">
-              <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__prev" href="/">Главная</a></li><span class="breadcrumbs__divider">|</span>
-              <li class="breadcrumbs__item"><span class="breadcrumbs__current">Доставка и оплата</span></li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-      <section class="contacts">
-        <div class="contacts__container"> 
-          <h2 class="section__title--big">ДОСТАВКА И ОПЛАТА</h2>
+      <section class="services-banner">
+        <div class="services-banner__container"> 
+          <div class="services-banner__wrapper"> 
+            <div class="services-banner__img"> <img src="./assets/img/Mask group (2).jpg" alt=""></div>
+            <div class="services-banner__text">   
+              <div class="breadcrumbs">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumbs__wrapper">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__prev" href="/">Главная</a></li><span class="breadcrumbs__divider">|</span>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__prev" href="/">Каталог</a></li><span class="breadcrumbs__divider">|</span>
+                    <li class="breadcrumbs__item"><span class="breadcrumbs__current">Кубки</span></li>
+                  </ol>
+                </nav>
+              </div>
+              <h1> Кубки</h1>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="why-us">
+      <section class="catalog">
+        <div class="catalog__container">
+          <div class="catalog__layout">
+            <!-- Фильтры-->
+            <aside class="catalog__filters">
+              <form class="catalog-filters" action="#" method="get">
+                <h3 class="catalog-filters__title">Назначения</h3>
+                <ul class="catalog-filters__list">
+                  <li class="catalog-filters__item">
+                    <label>
+                      <input type="radio" name="purpose" value="sport" checked>Спорт
+                    </label>
+                  </li>
+                  <li class="catalog-filters__item">
+                    <label>
+                      <input type="radio" name="purpose" value="corporate">Корпоративы
+                    </label>
+                  </li>
+                  <li class="catalog-filters__item">
+                    <label>
+                      <input type="radio" name="purpose" value="kids">Детские
+                    </label>
+                  </li>
+                </ul>
+                <h3 class="catalog-filters__title">Цвет</h3>
+                <ul class="catalog-filters__list">
+                  <li class="catalog-filters__item">
+                    <label>
+                      <input type="radio" name="color" value="gold" checked>Золото
+                    </label>
+                  </li>
+                  <li class="catalog-filters__item">
+                    <label>
+                      <input type="radio" name="color" value="silver">Серебро
+                    </label>
+                  </li>
+                  <li class="catalog-filters__item">
+                    <label>
+                      <input type="radio" name="color" value="bronze">Бронза
+                    </label>
+                  </li>
+                  <li class="catalog-filters__item">
+                    <label>
+                      <input type="radio" name="color" value="multicolor">Мультиколор
+                    </label>
+                  </li>
+                </ul>
+                <h3 class="catalog-filters__title">Наличие</h3>
+                <ul class="catalog-filters__list">
+                  <li class="catalog-filters__item">
+                    <label>
+                      <input type="radio" name="availability" value="in-stock" checked>В наличии
+                    </label>
+                  </li>
+                  <li class="catalog-filters__item">
+                    <label>
+                      <input type="radio" name="availability" value="on-order">Под заказ
+                    </label>
+                  </li>
+                </ul>
+                <h3 class="catalog-filters__title">Цена</h3>
+                <div class="catalog-filters__price">
+                  <input class="catalog-filters__price-input" type="number" placeholder="От 0 ₽"><span>—</span>
+                  <input class="catalog-filters__price-input" type="number" placeholder="До 30 000 ₽">
+                  <div class="catalog-filters__range">
+                    <input type="range" min="0" max="30000" value="0">
+                    <input type="range" min="0" max="30000" value="30000">
+                  </div>
+                </div>
+                <button class="catalog-filters__btn" type="submit">Показать товары</button>
+                <button class="catalog-filters__reset" type="reset">Сбросить фильтр</button>
+              </form>
+            </aside>
+            <!-- Контент товаров-->
+            <div class="catalog__content">
+              <p class="catalog__count">458 товаров</p>
+              <div class="catalog-grid">
+                <article class="catalog-card"><img class="catalog-card__img" src="./assets/img/image 9.jpg" alt="Диплом">
+                  <p class="catalog-card__code">GR15</p>
+                  <h4 class="catalog-card__title">Диплом наградной</h4>
+                  <p class="catalog-card__price">460 ₽/Шт</p>
+                  <button class="catalog-card__add">
+                     <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.4961 0V21" stroke="black" />
+<path d="M21 10.4961L4.76837e-07 10.4961" stroke="black" />
+</svg>
+                  </button>
+                </article>
+                <article class="catalog-card"><img class="catalog-card__img" src="./assets/img/image 10.png" alt="Медаль"><span class="catalog-card__badge">Акция</span><span class="catalog-card__badge catalog-card__badge--hit">Хит</span>
+                  <p class="catalog-card__code">MK227K</p>
+                  <h4 class="catalog-card__title">Медаль-комплект</h4>
+                  <p class="catalog-card__price"><span class="catalog-card__price-old">3 469 ₽</span>2 120 ₽/Шт</p>
+                  <button class="catalog-card__add">
+                     <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.4961 0V21" stroke="black" />
+<path d="M21 10.4961L4.76837e-07 10.4961" stroke="black" />
+</svg>
+                  </button>
+                </article>
+                <article class="catalog-card"><img class="catalog-card__img" src="./assets/img/image 11.png" alt="Приз">
+                  <p class="catalog-card__code">PS1019</p>
+                  <h4 class="catalog-card__title">Приз с фигурой “Борьба”</h4>
+                  <p class="catalog-card__price">6 009 ₽/Шт</p>
+                  <button class="catalog-card__add">
+                     <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.4961 0V21" stroke="black" />
+<path d="M21 10.4961L4.76837e-07 10.4961" stroke="black" />
+</svg>
+                  </button>
+                </article>
+                <article class="catalog-card"><img class="catalog-card__img" src="./assets/img/image 9.jpg" alt="Диплом">
+                  <p class="catalog-card__code">GR15</p>
+                  <h4 class="catalog-card__title">Диплом наградной</h4>
+                  <p class="catalog-card__price">460 ₽/Шт</p>
+                  <button class="catalog-card__add">
+                     <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.4961 0V21" stroke="black" />
+<path d="M21 10.4961L4.76837e-07 10.4961" stroke="black" />
+</svg>
+                  </button>
+                </article>
+                <article class="catalog-card"><img class="catalog-card__img" src="./assets/img/image 10.png" alt="Медаль"><span class="catalog-card__badge">Акция</span><span class="catalog-card__badge catalog-card__badge--hit">Хит</span>
+                  <p class="catalog-card__code">MK227K</p>
+                  <h4 class="catalog-card__title">Медаль-комплект</h4>
+                  <p class="catalog-card__price"><span class="catalog-card__price-old">3 469 ₽</span>2 120 ₽/Шт</p>
+                  <button class="catalog-card__add">
+                     <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.4961 0V21" stroke="black" />
+<path d="M21 10.4961L4.76837e-07 10.4961" stroke="black" />
+</svg>
+                  </button>
+                </article>
+                <article class="catalog-card"><img class="catalog-card__img" src="./assets/img/image 11.png" alt="Приз">
+                  <p class="catalog-card__code">PS1019</p>
+                  <h4 class="catalog-card__title">Приз с фигурой “Борьба”</h4>
+                  <p class="catalog-card__price">6 009 ₽/Шт</p>
+                  <button class="catalog-card__add">
+                     <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.4961 0V21" stroke="black" />
+<path d="M21 10.4961L4.76837e-07 10.4961" stroke="black" />
+</svg>
+                  </button>
+                </article>
+              </div>
+              <!-- Пагинация-->
+              <div class="catalog-pagination">
+                <button class="catalog-pagination__btn" type="button"><</button>
+                <ul class="catalog-pagination__list">
+                  <li class="catalog-pagination__item active">1</li>
+                  <li class="catalog-pagination__item">2</li>
+                  <li class="catalog-pagination__item">3</li>
+                </ul>
+                <button class="catalog-pagination__btn" type="button">></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="recent-product">
+        <div class="recent-product__container">
+          <div class="recent-product__header">
+            <h2 class="recent-product__title">вы смотрели</h2>
+            <div class="recent-product__nav">
+              <button class="recent-product__prev" type="button"><svg width="13" height="27" viewBox="0 0 13 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.2808 0.625L1.28076 13.125L11.2808 25.625" stroke="#1C1C1C" stroke-width="2" />
+</svg>
+              </button>
+              <button class="recent-product__next" type="button"><svg width="13" height="27" viewBox="0 0 13 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.78125 25.625L10.7812 13.125L0.78125 0.625" stroke="#1C1C1C" stroke-width="2" />
+</svg>
+              </button>
+            </div>
+          </div>
+          <div class="recent-product__slider swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <article class="catalog-card"><img class="catalog-card__img" src="./assets/img/image 9.jpg" alt="Диплом наградной">
+                  <p class="catalog-card__code">GR15</p>
+                  <h4 class="catalog-card__title">Диплом наградной</h4>
+                  <p class="catalog-card__price">460 ₽/Шт</p>
+                  <button class="catalog-card__add" type="button">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.4961 0V21" stroke="black"></path>
+                      <path d="M21 10.4961L0 10.4961" stroke="black"></path>
+                    </svg>
+                  </button>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="catalog-card"><img class="catalog-card__img" src="./assets/img/image 10.png" alt="Медаль-комплект"><span class="catalog-card__badge">Акция</span><span class="catalog-card__badge catalog-card__badge--hit">Хит</span>
+                  <p class="catalog-card__code">MK227K</p>
+                  <h4 class="catalog-card__title">Медаль-комплект</h4>
+                  <p class="catalog-card__price"><span class="catalog-card__price-old">3 469 ₽</span>2 120 ₽/Шт</p>
+                  <button class="catalog-card__add" type="button">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.4961 0V21" stroke="black"></path>
+                      <path d="M21 10.4961L0 10.4961" stroke="black"></path>
+                    </svg>
+                  </button>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="catalog-card"><img class="catalog-card__img" src="./assets/img/image 11.png" alt="Приз с фигурой “Борьба”">
+                  <p class="catalog-card__code">PS1019</p>
+                  <h4 class="catalog-card__title">Приз с фигурой “Борьба”</h4>
+                  <p class="catalog-card__price">6 009 ₽/Шт</p>
+                  <button class="catalog-card__add" type="button">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.4961 0V21" stroke="black"></path>
+                      <path d="M21 10.4961L0 10.4961" stroke="black"></path>
+                    </svg>
+                  </button>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="catalog-card"><img class="catalog-card__img" src="./assets/img/image 9.jpg" alt="Диплом наградной">
+                  <p class="catalog-card__code">GR15</p>
+                  <h4 class="catalog-card__title">Диплом наградной</h4>
+                  <p class="catalog-card__price">460 ₽/Шт</p>
+                  <button class="catalog-card__add" type="button">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.4961 0V21" stroke="black"></path>
+                      <path d="M21 10.4961L0 10.4961" stroke="black"></path>
+                    </svg>
+                  </button>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="catalog-card"><img class="catalog-card__img" src="./assets/img/image 10.png" alt="Медаль-комплект"><span class="catalog-card__badge">Акция</span><span class="catalog-card__badge catalog-card__badge--hit">Хит</span>
+                  <p class="catalog-card__code">MK227K</p>
+                  <h4 class="catalog-card__title">Медаль-комплект</h4>
+                  <p class="catalog-card__price"><span class="catalog-card__price-old">3 469 ₽</span>2 120 ₽/Шт</p>
+                  <button class="catalog-card__add" type="button">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.4961 0V21" stroke="black"></path>
+                      <path d="M21 10.4961L0 10.4961" stroke="black"></path>
+                    </svg>
+                  </button>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="catalog-card"><img class="catalog-card__img" src="./assets/img/image 11.png" alt="Приз с фигурой “Борьба”">
+                  <p class="catalog-card__code">PS1019</p>
+                  <h4 class="catalog-card__title">Приз с фигурой “Борьба”</h4>
+                  <p class="catalog-card__price">6 009 ₽/Шт</p>
+                  <button class="catalog-card__add" type="button">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.4961 0V21" stroke="black"></path>
+                      <path d="M21 10.4961L0 10.4961" stroke="black"></path>
+                    </svg>
+                  </button>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-section">
+        <div class="text-section__container"> 
+          <div class="text-section__wrapper">
+            <h2>
+               наградные изделия – купить в интернет-магазине недорого </h2>
+            <div class="text-section__text"> 
+              <p>Ищете кубки для награждения победителей? В нашем интернет-магазине вы можете заказать кубки от производителя по выгодным ценам! Широкий выбор моделей:</p>
+              <ul> 
+                <li>
+                   Спортивные кубки — для футбола, хоккея, бокса и других соревнований</li>
+                <li>Корпоративные награды — для сотрудников, партнеров и бизнес-мероприятий</li>
+                <li>Творческие премии — для вручения на фестивалях и конкурсах</li>
+                <li>
+                   Детские кубки — яркие и легкие, для школьных состязаний</li>
+              </ul>
+              <p>Выбирайте из металлических, акриловых, хрустальных и комбинированных моделей. Возможен индивидуальный дизайн! Закажите кубки прямо сейчас — пусть каждая победа будет памятной!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="why-us why-us-catalog">
         <div class="why-us__container"> 
           <div class="why-us__wrapper"> 
-            <div class="why-us__top"> 
-              <h2>Как оформить заказ?</h2>
-            </div>
             <div class="why-us__bottom"> 
-              <div class="why-us-step">
-                <div class="why-us-step__num">01</div>
+              <div class="why-us-step why-us-step-text"> 
+                <h2>почему выбирают нас?</h2>
+              </div>
+              <div class="why-us-step"> 
+                <div class="why-us-step__num">
+                   01</div>
                 <div class="why-us-step__text">
                    Выберите товар на сайте или уточните наличие по телефону.</div>
               </div>
@@ -164,97 +444,6 @@
                    После подтверждения заказ формируется и отправляется.</div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section class="order-guide-banner">
-        <div class="order-guide-banner__container"> 
-          <div class="order-guide-banner__wrapper"> 
-            <div class="order-guide-banner__text"> 
-              <h3>Есть вопросы? Звоните – поможем с выбором и оформлением!</h3>
-              <div class="order-guide-banner__text-bottom"> 
-                <p>Доставка осуществляется после 100% предоплаты или по договоренности. Точные сроки и стоимость уточняйте у менеджера</p>
-                <div class="order-guide-banner__button">
-                   +7 (914) 790 99 11</div>
-              </div>
-            </div>
-            <div class="order-guide-banner__img"> <img src="./assets/img/Rectangle 158.jpg" alt=""></div>
-          </div>
-        </div>
-      </section>
-      <section class="usage usage-order-guide">
-        <div class="usage__container"> 
-          <div class="usage__wrapper"> 
-            <div class="usage-order-guide-card">
-              <h2>
-                 Варианты оплаты</h2>
-              <p>
-                 На данный момент на сайте недоступна онлайн-оплата. Доступные варианты оплаты:     </p>
-            </div>
-            <div class="usage-card">
-              <div class="usage-card__title"> 
-                <h3>
-                   Банковский перевод</h3>
-                <p>
-                   (по реквизитам, для юридических и физических лиц)</p>
-              </div>
-            </div>
-            <div class="usage-card">
-              <div class="usage-card__title"> 
-                <h3>
-                   Оплата наличными</h3>
-                <p>
-                   при самовывозе</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="order-guide-delivery">
-        <div class="order-guide-delivery__container"> 
-          <h2>Доставка</h2>
-          <div class="order-guide-delivery__wrapper"> 
-            <div class="order-guide-delivery-card">
-              <div class="order-guide-delivery-card__title">
-                 Самовывоз</div>
-              <div class="contacts-info">
-                <div class="contacts-info__address">
-                  <p class="contacts-info__text">Вы можете забрать заказ самостоятельно по адресу:</p>
-                  <p class="contacts-info__text">690024, Приморский край, Владивосток, улица Маковского 284, офис 343</p>
-                  <div class="contacts-info__schedule"></div>
-                  <table class="contacts-info__table">
-                    <thead></thead>
-                    <tr>
-                      <th>График работы:</th>
-                    </tr>
-                    <tbody></tbody>
-                    <tr>
-                      <td>Пн–Пт</td>
-                      <td>с 10:00 до 18:00</td>
-                    </tr>
-                    <tr>
-                      <td>Сб</td>
-                      <td>с 10:00 до 15:00</td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-            </div>
-            <div class="order-guide-delivery-card">
-              <div class="order-guide-delivery-card__title">
-                 Доставка по России и СНГ</div>
-              <div class="contacts-info">
-                <div class="contacts-info__address">
-                  <p class="contacts-info__text">Мы отправляем заказы через:</p>
-                  <p class="contacts-info__text">Транспортные компании (СДЭК, Деловые Линии, ПЭК и др.)</p>
-                  <p class="contacts-info__text">Почту России (наложенный платеж или предоплата)</p>
-                  <p class="contacts-info__text">Упаковка – надежная, защищающая товар при перевозке.</p>
-                </div>
-              </div>
-              <div class="tip">
-                 *Сроки и стоимость доставки зависят от выбранной ТК и региона.</div>
-            </div>
-            <div class="order-guide-delivery-card img"> <img src="./assets/img/Rectangle 168.jpg" alt=""></div>
           </div>
         </div>
       </section>

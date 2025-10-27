@@ -12,6 +12,14 @@
         color: #1c1c1c;  
     }
 
+    &.why-us-catalog {
+        @media (max-width: 991px) {
+            .why-us__bottom div:nth-child(5) {
+                grid-column: unset;
+            }
+        }
+    }
+
     &-secondary {
         .why-us__bottom div:nth-child(5) {
             grid-column: unset;
@@ -79,6 +87,10 @@
         align-items: center;
 
       
+        &-text {
+           
+            grid-column: 1 / -1;
+        }
 
         &__num {
             font-family: var(--second-family);

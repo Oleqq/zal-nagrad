@@ -1,0 +1,32 @@
+.subcategory {
+
+    &-card {
+        padding: 26px;
+
+        @media (max-width:767px) {
+            padding: 13px;
+        }
+        p {
+            font-family: var(--second-family);
+            font-weight: 700;
+            font-size: 35px;
+            @include adaptiveValue(font-size, 35px, 24px, 1920px, 767px);
+            
+        }
+
+        cursor: pointer;
+        transition: .2s ease;
+
+        &:hover {
+            transition: .2s ease;
+
+            p {
+                color:  #fff;
+            }
+
+            background-color: #f6b300;
+            border-color: #f6b300;
+
+        }
+    }
+}

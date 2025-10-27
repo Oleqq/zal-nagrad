@@ -1,0 +1,104 @@
+section.catalog
+  .catalog__container
+    .catalog__layout
+      // Фильтры
+      aside.catalog__filters
+        form.catalog-filters(action="#" method="get")
+          h3.catalog-filters__title Назначения
+          ul.catalog-filters__list
+            li.catalog-filters__item
+              label
+                input(type="radio" name="purpose" value="sport" checked)
+                | Спорт
+            li.catalog-filters__item
+              label
+                input(type="radio" name="purpose" value="corporate")
+                | Корпоративы
+            li.catalog-filters__item
+              label
+                input(type="radio" name="purpose" value="kids")
+                | Детские
+
+          h3.catalog-filters__title Цвет
+          ul.catalog-filters__list
+            li.catalog-filters__item
+              label
+                input(type="radio" name="color" value="gold" checked)
+                | Золото
+            li.catalog-filters__item
+              label
+                input(type="radio" name="color" value="silver")
+                | Серебро
+            li.catalog-filters__item
+              label
+                input(type="radio" name="color" value="bronze")
+                | Бронза
+            li.catalog-filters__item
+              label
+                input(type="radio" name="color" value="multicolor")
+                | Мультиколор
+
+          h3.catalog-filters__title Наличие
+          ul.catalog-filters__list
+            li.catalog-filters__item
+              label
+                input(type="radio" name="availability" value="in-stock" checked)
+                | В наличии
+            li.catalog-filters__item
+              label
+                input(type="radio" name="availability" value="on-order")
+                | Под заказ
+
+          h3.catalog-filters__title Цена
+          .catalog-filters__price
+            input.catalog-filters__price-input(type="number" placeholder="От 0 ₽")
+            span —
+            input.catalog-filters__price-input(type="number" placeholder="До 30 000 ₽")
+            .catalog-filters__range
+              input(type="range" min="0" max="30000" value="0")
+              input(type="range" min="0" max="30000" value="30000")
+
+          button.catalog-filters__btn(type="submit") Показать товары
+          button.catalog-filters__reset(type="reset") Сбросить фильтр
+
+      // Контент товаров
+      .catalog__content
+        p.catalog__count 458 товаров
+
+        .catalog-grid
+          each item in [1,2,3,4,5,6]
+            article.catalog-card
+              if item % 3 === 1
+                img.catalog-card__img(src="./assets/img/image 9.jpg" alt="Диплом")
+                p.catalog-card__code GR15
+                h4.catalog-card__title Диплом наградной
+                p.catalog-card__price 460 ₽/Шт
+              else if item % 3 === 2
+                img.catalog-card__img(src="./assets/img/image 10.png" alt="Медаль")
+                span.catalog-card__badge Акция
+                span.catalog-card__badge.catalog-card__badge--hit Хит
+                p.catalog-card__code MK227K
+                h4.catalog-card__title Медаль-комплект
+                p.catalog-card__price
+                  span.catalog-card__price-old 3 469 ₽
+                  | 2 120 ₽/Шт
+              else
+                img.catalog-card__img(src="./assets/img/image 11.png" alt="Приз")
+                p.catalog-card__code PS1019
+                h4.catalog-card__title Приз с фигурой “Борьба”
+                p.catalog-card__price 6 009 ₽/Шт
+              
+              button.catalog-card__add 
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.4961 0V21" stroke="black" />
+                    <path d="M21 10.4961L4.76837e-07 10.4961" stroke="black" />
+                </svg>
+                        
+        // Пагинация
+        .catalog-pagination
+          button.catalog-pagination__btn(type="button") <
+          ul.catalog-pagination__list
+            li.catalog-pagination__item.active 1
+            li.catalog-pagination__item 2
+            li.catalog-pagination__item 3
+          button.catalog-pagination__btn(type="button") >
