@@ -1,5 +1,6 @@
 section.index-news {
-  padding-top: 200px;
+  margin-bottom: 86px;
+  @include adaptiveValue(margin-bottom, 86px, 52px, 1920px, 767px);
   .index-news__container {
     .index-news__wrapper {
       .index-news__top {

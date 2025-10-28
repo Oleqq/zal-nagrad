@@ -1,3 +1,5 @@
+
+
 // header menu
 document.addEventListener("DOMContentLoaded", () => {
   const burgerMenu = document.querySelector(".burger-menu");
@@ -122,6 +124,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const recentSlider = new Swiper('.recent-product__slider', {
     // modules: [Navigation],
@@ -221,4 +225,53 @@ document.addEventListener('DOMContentLoaded', () => {
       item.remove();
     }
   });
+});
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (typeof Swiper === 'undefined') return;
+
+  const heroSwiper = new Swiper('.hero__slider', {
+    slidesPerView: 1,
+    loop: true,
+    speed: 800,
+    navigation: {
+      nextEl: '.hero__arrow--next',
+      prevEl: '.hero__arrow--prev',
+    },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+  });
+
+  const navButtons = Array.from(document.querySelectorAll('.hero__nav-item'));
+
+  // Обработчик для навигационных кнопок
+  navButtons.forEach((btn, i) => {
+    btn.addEventListener('click', () => {
+      heroSwiper.slideToLoop(i);
+    });
+  });
+
+  // Обновление активного состояния навигации
+  heroSwiper.on('slideChange', () => {
+    updateNav(heroSwiper.realIndex);
+  });
+
+  heroSwiper.on('init', () => {
+    updateNav(heroSwiper.realIndex);
+  });
+
+  function updateNav(activeIndex) {
+    navButtons.forEach((btn, i) => {
+      btn.classList.toggle('active', i === activeIndex);
+      btn.setAttribute('aria-selected', i === activeIndex);
+    });
+  }
 });

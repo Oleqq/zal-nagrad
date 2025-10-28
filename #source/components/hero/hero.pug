@@ -1,108 +1,174 @@
-<section class="section preview">
-  <div class="preview__container">
-    <div class="preview-links">
+section.hero
+  .hero__container
+    //- Слайдер Swiper
+    .swiper.hero__slider
+      .swiper-wrapper
+        .swiper-slide.hero__slide
+          .hero__image(style="background-image: url('./assets/img/Mask group (3).jpg')")
+          .hero__content
+            h1.hero__title Наградная продукция на заказ
+            p.hero__text Широкий ассортимент наградной продукции оригинального дизайна: кубков, медалей, призов, сувениров и эксклюзивной продукции для предстоящих событий и знаменательных дат.
 
-      <a class="logo" href="#">
-        <svg width="233" height="51" viewBox="0 0 233 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M18.4463 12.6079C19.2958 11.4321 19.724 10.0115 19.724 8.35315C19.724 6.69475 19.3298 5.17229 18.5414 3.92849C17.753 2.6847 16.6451 1.71957 15.2314 1.0331C13.8109 0.339835 12.1661 0 10.2834 0C8.2512 0 6.49085 0.380615 4.99558 1.14864C3.5003 1.91667 2.33127 3.01774 1.47488 4.45864C0.611703 5.90634 0.122341 7.66668 0 9.74647H3.61585C3.94209 7.71426 4.66934 6.16461 5.79759 5.09753C6.92584 4.03045 8.40752 3.5003 10.2426 3.5003C12.0777 3.5003 13.3963 3.96928 14.443 4.91402C15.4829 5.85196 16.0062 7.08896 16.0062 8.62502C16.0062 10.1611 15.4897 11.3437 14.4634 12.2545C13.4371 13.172 12.0642 13.6274 10.3582 13.6274H6.74233V17.0869H10.3582C12.0166 17.0869 13.3351 17.5763 14.3275 18.555C15.3198 19.5337 15.8159 20.8387 15.8159 22.4699C15.8159 23.5234 15.578 24.4477 15.1023 25.2362C14.6265 26.0246 13.9604 26.6431 13.104 27.0781C12.2477 27.5199 11.2485 27.7374 10.0931 27.7374C8.33956 27.7374 6.90545 27.2276 5.80439 26.2149C4.70332 25.1954 4.03724 23.7477 3.80615 21.865H0.190308C0.265071 23.8224 0.713654 25.5012 1.52926 26.9082C2.34486 28.3151 3.47991 29.3889 4.93441 30.1298C6.3889 30.8706 8.12206 31.2376 10.1271 31.2376C11.9826 31.2376 13.6206 30.8842 15.0411 30.1842C16.4616 29.4841 17.5763 28.485 18.3919 27.1936C19.2075 25.9022 19.6153 24.4138 19.6153 22.735C19.6153 20.8999 19.1939 19.3502 18.3511 18.0656C17.5083 16.7879 16.3869 15.9451 14.9799 15.5441V14.9799C16.4344 14.5789 17.5899 13.7905 18.4463 12.6079Z" fill="white"></path>
-          <path d="M30.347 0.564453L22.4424 30.6806H26.133L28.8585 20.0642H37.7214L40.4333 30.6806H44.3482L36.4436 0.564453H30.347ZM29.7692 16.5231L33.1336 3.42587H33.4734L36.8174 16.5231H29.7692Z" fill="white"></path>
-          <path d="M57.6563 0.564453H54.0812L53.4423 18.5961C53.3675 20.7031 53.2248 22.3615 53.0073 23.5645C52.7966 24.7675 52.5112 25.6443 52.1577 26.2016C51.8043 26.7522 51.3829 27.1056 50.8935 27.2551C50.4042 27.4046 49.8604 27.4794 49.2555 27.4794H48.6914V30.9797H49.6293C50.3566 30.9797 51.0635 30.9321 51.7567 30.8506C52.45 30.7622 53.0957 30.5651 53.6938 30.2457C54.2987 29.933 54.8288 29.4165 55.291 28.7028C55.7532 27.9892 56.1338 26.9968 56.4193 25.7259C56.7047 24.4617 56.8746 22.8576 56.929 20.9274L57.5203 4.06476H66.7163V30.6807H70.4816V0.564453H57.6427H57.6563Z" fill="white"></path>
-          <path d="M90.9195 12.683H82.4848V0.564453H76.123V30.6806H82.4848V18.7117H90.9195V30.6806H97.2744V0.564453H90.9195V12.683Z" fill="#FFC242"></path>
-          <path d="M131.225 30.6806H137.586V6.58633H150.045V0.564453H131.225V30.6806Z" fill="#FFC242"></path>
-          <path d="M171.324 1.73349C169.768 0.958662 167.96 0.564453 165.901 0.564453H154.421V30.6806H160.783V19.1602H165.901C167.96 19.1602 169.768 18.7864 171.324 18.032C172.881 17.2775 174.077 16.2173 174.92 14.8511C175.763 13.485 176.184 11.8742 176.184 10.0119C176.184 8.14958 175.763 6.40962 174.92 5.0027C174.077 3.59578 172.881 2.50831 171.324 1.72669V1.73349ZM168.782 12.5335C168.089 13.1384 167.144 13.4374 165.941 13.4374H160.783V6.55235H165.941C167.144 6.55235 168.089 6.85141 168.782 7.45631C169.469 8.06122 169.815 8.91081 169.815 10.0187C169.815 11.1265 169.469 11.9421 168.782 12.5402V12.5335Z" fill="#FFC242"></path>
-          <path d="M229.491 24.6588V0.564453H211.575C211.527 3.50063 211.466 6.08338 211.405 8.31949C211.343 10.5556 211.262 12.4791 211.16 14.0967C211.058 15.7143 210.956 17.1008 210.84 18.2563C210.725 19.4117 210.589 20.3768 210.426 21.1517C210.263 21.9265 210.066 22.5926 209.841 23.1499C209.617 23.7004 209.366 24.2034 209.087 24.652H207.395V37.2599H213.457V30.6739H226.48V37.2599H232.542V24.652H229.491V24.6588ZM223.129 24.6588H215.564C215.761 24.1558 215.952 23.6189 216.128 23.0412C216.305 22.4634 216.468 21.7634 216.618 20.9342C216.767 20.105 216.896 19.0651 217.012 17.8077C217.127 16.5503 217.229 15.0142 217.331 13.1927C217.433 11.3712 217.508 9.16908 217.556 6.58633H223.129V24.652V24.6588Z" fill="#FFC242"></path>
-          <path d="M114.13 50.7235C106.708 50.7235 100.673 44.6881 100.673 37.2661C100.673 29.8441 106.708 23.8086 114.13 23.8086C121.552 23.8086 127.588 29.8441 127.588 37.2661C127.588 44.6881 121.552 50.7235 114.13 50.7235ZM114.13 29.246C109.706 29.246 106.11 32.8414 106.11 37.2661C106.11 41.6907 109.706 45.2862 114.13 45.2862C118.555 45.2862 122.15 41.6907 122.15 37.2661C122.15 32.8414 118.555 29.246 114.13 29.246Z" fill="#FFC242"></path>
-          <path d="M113.036 21.6886L111.67 15.4017H116.965L115.578 21.709C117.284 21.8925 119.133 22.4362 121.043 23.5781L126.215 0.564453H120.227L118.29 9.37298H110.358L108.448 0.564453H102.053L107.225 23.5441C108.041 23.0615 110.188 21.9469 113.036 21.6818V21.6886Z" fill="#FFC242"></path>
-          <path d="M190.994 50.7235C183.572 50.7235 177.536 44.6881 177.536 37.2661C177.536 29.8441 183.572 23.8086 190.994 23.8086C198.416 23.8086 204.451 29.8441 204.451 37.2661C204.451 44.6881 198.416 50.7235 190.994 50.7235ZM190.994 29.246C186.569 29.246 182.973 32.8414 182.973 37.2661C182.973 41.6907 186.569 45.2862 190.994 45.2862C195.418 45.2862 199.014 41.6907 199.014 37.2661C199.014 32.8414 195.418 29.246 190.994 29.246Z" fill="#FFC242"></path>
-          <path d="M189.901 21.6877L188.534 15.4007H193.829L192.442 21.7081C194.148 21.8916 195.997 22.4353 197.907 23.5772L203.086 0.570312H197.098L195.161 9.37884H187.229L185.32 0.570312H178.924L184.096 23.55C184.912 23.0674 187.059 21.9527 189.907 21.6877H189.901Z" fill="#FFC242"></path>
-          <path d="M114.131 34.0039L114.865 36.2604H117.23L115.32 37.6537L116.047 39.9034L114.131 38.5101L112.214 39.9034L112.948 37.6537L111.031 36.2604H113.403L114.131 34.0039Z" fill="#FFC242"></path>
-          <path d="M190.994 34.0039L191.728 36.2604H194.093L192.183 37.6537L192.91 39.9034L190.994 38.5101L189.077 39.9034L189.811 37.6537L187.895 36.2604H190.267L190.994 34.0039Z" fill="#FFC242"></path>
-        </svg>
-      </a>
+            .hero__controls
+                a.hero__button.btn.ui-button(href="#") В каталог
 
-      <div class="preview-links__header">
-        <h2 class="preview-links__title">Готовые страницы</h2>
-        <p class="preview-links__subtitle">Временный раздел для проверки и демонстрации разработанных страниц проекта</p>
-      </div>
+                .hero__arrows
+                    button.hero__arrow.hero__arrow--prev(type="button")
+                        <svg width="35" height="15" viewBox="0 0 35 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.292893 6.65715C-0.0976295 7.04767 -0.0976296 7.68084 0.292892 8.07136L6.65685 14.4353C7.04738 14.8258 7.68054 14.8258 8.07107 14.4353C8.46159 14.0448 8.46159 13.4116 8.07107 13.0211L2.41422 7.36425L8.07107 1.7074C8.46159 1.31688 8.46159 0.683712 8.07107 0.293188C7.68054 -0.0973368 7.04738 -0.0973368 6.65686 0.293188L0.292893 6.65715ZM35 7.36426L35 6.36426L1 6.36425L1 7.36425L1 8.36425L35 8.36426L35 7.36426Z" fill="white" />
+                        </svg>
+                    button.hero__arrow.hero__arrow--next(type="button")
+                        <svg width="35" height="15" viewBox="0 0 35 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M34.7071 8.07136C35.0976 7.68084 35.0976 7.04768 34.7071 6.65715L28.3431 0.29319C27.9526 -0.0973344 27.3195 -0.0973344 26.9289 0.29319C26.5384 0.683714 26.5384 1.31688 26.9289 1.7074L32.5858 7.36426L26.9289 13.0211C26.5384 13.4116 26.5384 14.0448 26.9289 14.4353C27.3195 14.8259 27.9526 14.8259 28.3431 14.4353L34.7071 8.07136ZM0 7.36426V8.36426H34V7.36426V6.36426H0V7.36426Z" fill="white" />
+                        </svg>
 
-      <div class="preview-links__grid" style="margin-bottom: 120px;">
-        <a class="preview-links__item done" href="https://zal-nagrad.vercel.app/blog-post.html" target="_blank">
-          <span class="preview-links__text">Блог (пост)</span>
-           
-        </a>
-        <a class="preview-links__item done" href="https://zal-nagrad.vercel.app/blog.html" target="_blank">
-          <span class="preview-links__text">Блог</span>
-           
-        </a>
-        <a class="preview-links__item done" href="https://zal-nagrad.vercel.app/catalog.html" target="_blank">
-          <span class="preview-links__text">Каталог</span>
-           
-        </a>
-        <a class="preview-links__item done" href="https://zal-nagrad.vercel.app/contacts.html" target="_blank">
-          <span class="preview-links__text">Контакты</span>
-           
-        </a>
-        <a class="preview-links__item done new" href="https://zal-nagrad.vercel.app/services.html" target="_blank">
-          <span class="preview-links__text">Услуги</span>
-           
-        </a>
-        <a class="preview-links__item done" href="https://zal-nagrad.vercel.app/service-one.html" target="_blank">
-          <span class="preview-links__text">Услуга — 1</span>
-           
-        </a>
-        <a class="preview-links__item done" href="https://zal-nagrad.vercel.app/service-two.html" target="_blank">
-          <span class="preview-links__text">Услуга — 2</span>
-           
-        </a>
-        <a class="preview-links__item done" href="https://zal-nagrad.vercel.app/service-three.html" target="_blank">
-          <span class="preview-links__text">Услуга — 3</span>
-           
-        </a>
-        <a class="preview-links__item done" href="https://zal-nagrad.vercel.app/about-us.html" target="_blank">
-          <span class="preview-links__text">О компании</span>
-           
-        </a>
-         <a class="preview-links__item done" href="https://zal-nagrad.vercel.app/order-guide.html" target="_blank">
-          <span class="preview-links__text">Детали заказа</span>
-           
-        </a>
-        <a class="preview-links__item done" href="https://zal-nagrad.vercel.app/category.html" target="_blank">
-          <span class="preview-links__text">Категория</span>
-           
-        </a>
-        <a class="preview-links__item done" href="https://zal-nagrad.vercel.app/subcategory.html" target="_blank">
-          <span class="preview-links__text">Подкатегория</span>
-           
-        </a>
-        <a class="preview-links__item done" href="https://zal-nagrad.vercel.app/cart.html" target="_blank">
-          <span class="preview-links__text">Корзина</span>
-           
-        </a>
-      </div>
+            img.hero__image-dc(src="./assets/img/Group 222.png", alt="")
 
+        .swiper-slide.hero__slide
+          .hero__image(style="background-image: url('./assets/img/Mask group (3).jpg')")
+          .hero__content
+            h1.hero__title Наградная продукция на заказ
+            p.hero__text Широкий ассортимент наградной продукции оригинального дизайна: кубков, медалей, призов, сувениров и эксклюзивной продукции для предстоящих событий и знаменательных дат.
 
-        <div class="preview-links__header">
-            <h2 class="preview-links__title secondary">В разработке</h2>
-            <p class="preview-links__subtitle">. . .</p>
-        </div>
+            .hero__controls
+                a.hero__button.btn.ui-button(href="#") В каталог
 
-      <div class="preview-links__grid">
-        <a class="preview-links__item" href="https://zal-nagrad.vercel.app/index.html" target="_blank">
-          <span class="preview-links__text">Главная</span>
-           
-        </a>
-        
-        
-        <a class="preview-links__item" href="https://zal-nagrad.vercel.app/product.html" target="_blank">
-          <span class="preview-links__text">Товар</span>
-           
-        </a>
-        
-        
-        
-        
-       
-      </div>
-    </div>
-  </div>
-</section>
+                .hero__arrows
+                    button.hero__arrow.hero__arrow--prev(type="button")
+                        <svg width="35" height="15" viewBox="0 0 35 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.292893 6.65715C-0.0976295 7.04767 -0.0976296 7.68084 0.292892 8.07136L6.65685 14.4353C7.04738 14.8258 7.68054 14.8258 8.07107 14.4353C8.46159 14.0448 8.46159 13.4116 8.07107 13.0211L2.41422 7.36425L8.07107 1.7074C8.46159 1.31688 8.46159 0.683712 8.07107 0.293188C7.68054 -0.0973368 7.04738 -0.0973368 6.65686 0.293188L0.292893 6.65715ZM35 7.36426L35 6.36426L1 6.36425L1 7.36425L1 8.36425L35 8.36426L35 7.36426Z" fill="white" />
+                        </svg>
+                    button.hero__arrow.hero__arrow--next(type="button")
+                        <svg width="35" height="15" viewBox="0 0 35 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M34.7071 8.07136C35.0976 7.68084 35.0976 7.04768 34.7071 6.65715L28.3431 0.29319C27.9526 -0.0973344 27.3195 -0.0973344 26.9289 0.29319C26.5384 0.683714 26.5384 1.31688 26.9289 1.7074L32.5858 7.36426L26.9289 13.0211C26.5384 13.4116 26.5384 14.0448 26.9289 14.4353C27.3195 14.8259 27.9526 14.8259 28.3431 14.4353L34.7071 8.07136ZM0 7.36426V8.36426H34V7.36426V6.36426H0V7.36426Z" fill="white" />
+                        </svg>
+
+            img.hero__image-dc(src="./assets/img/Group 222.png", alt="")
+
+        .swiper-slide.hero__slide
+          .hero__image(style="background-image: url('./assets/img/Mask group (3).jpg')")
+          .hero__content
+            h1.hero__title Наградная продукция на заказ
+            p.hero__text Широкий ассортимент наградной продукции оригинального дизайна: кубков, медалей, призов, сувениров и эксклюзивной продукции для предстоящих событий и знаменательных дат.
+
+            .hero__controls
+                a.hero__button.btn.ui-button(href="#") В каталог
+
+                .hero__arrows
+                    button.hero__arrow.hero__arrow--prev(type="button")
+                        <svg width="35" height="15" viewBox="0 0 35 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.292893 6.65715C-0.0976295 7.04767 -0.0976296 7.68084 0.292892 8.07136L6.65685 14.4353C7.04738 14.8258 7.68054 14.8258 8.07107 14.4353C8.46159 14.0448 8.46159 13.4116 8.07107 13.0211L2.41422 7.36425L8.07107 1.7074C8.46159 1.31688 8.46159 0.683712 8.07107 0.293188C7.68054 -0.0973368 7.04738 -0.0973368 6.65686 0.293188L0.292893 6.65715ZM35 7.36426L35 6.36426L1 6.36425L1 7.36425L1 8.36425L35 8.36426L35 7.36426Z" fill="white" />
+                        </svg>
+                    button.hero__arrow.hero__arrow--next(type="button")
+                        <svg width="35" height="15" viewBox="0 0 35 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M34.7071 8.07136C35.0976 7.68084 35.0976 7.04768 34.7071 6.65715L28.3431 0.29319C27.9526 -0.0973344 27.3195 -0.0973344 26.9289 0.29319C26.5384 0.683714 26.5384 1.31688 26.9289 1.7074L32.5858 7.36426L26.9289 13.0211C26.5384 13.4116 26.5384 14.0448 26.9289 14.4353C27.3195 14.8259 27.9526 14.8259 28.3431 14.4353L34.7071 8.07136ZM0 7.36426V8.36426H34V7.36426V6.36426H0V7.36426Z" fill="white" />
+                        </svg>
+
+            img.hero__image-dc(src="./assets/img/Group 222.png", alt="")
+
+        .swiper-slide.hero__slide
+          .hero__image(style="background-image: url('./assets/img/Mask group (3).jpg')")
+          .hero__content
+            h1.hero__title Наградная продукция на заказ
+            p.hero__text Широкий ассортимент наградной продукции оригинального дизайна: кубков, медалей, призов, сувениров и эксклюзивной продукции для предстоящих событий и знаменательных дат.
+
+            .hero__controls
+                a.hero__button.btn.ui-button(href="#") В каталог
+
+                .hero__arrows
+                    button.hero__arrow.hero__arrow--prev(type="button")
+                        <svg width="35" height="15" viewBox="0 0 35 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.292893 6.65715C-0.0976295 7.04767 -0.0976296 7.68084 0.292892 8.07136L6.65685 14.4353C7.04738 14.8258 7.68054 14.8258 8.07107 14.4353C8.46159 14.0448 8.46159 13.4116 8.07107 13.0211L2.41422 7.36425L8.07107 1.7074C8.46159 1.31688 8.46159 0.683712 8.07107 0.293188C7.68054 -0.0973368 7.04738 -0.0973368 6.65686 0.293188L0.292893 6.65715ZM35 7.36426L35 6.36426L1 6.36425L1 7.36425L1 8.36425L35 8.36426L35 7.36426Z" fill="white" />
+                        </svg>
+                    button.hero__arrow.hero__arrow--next(type="button")
+                        <svg width="35" height="15" viewBox="0 0 35 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M34.7071 8.07136C35.0976 7.68084 35.0976 7.04768 34.7071 6.65715L28.3431 0.29319C27.9526 -0.0973344 27.3195 -0.0973344 26.9289 0.29319C26.5384 0.683714 26.5384 1.31688 26.9289 1.7074L32.5858 7.36426L26.9289 13.0211C26.5384 13.4116 26.5384 14.0448 26.9289 14.4353C27.3195 14.8259 27.9526 14.8259 28.3431 14.4353L34.7071 8.07136ZM0 7.36426V8.36426H34V7.36426V6.36426H0V7.36426Z" fill="white" />
+                        </svg>
+
+            img.hero__image-dc(src="./assets/img/Group 222.png", alt="")
+
+        .swiper-slide.hero__slide
+          .hero__image(style="background-image: url('./assets/img/Mask group (3).jpg')")
+          .hero__content
+            h1.hero__title Наградная продукция на заказ
+            p.hero__text Широкий ассортимент наградной продукции оригинального дизайна: кубков, медалей, призов, сувениров и эксклюзивной продукции для предстоящих событий и знаменательных дат.
+
+            .hero__controls
+                a.hero__button.btn.ui-button(href="#") В каталог
+
+                .hero__arrows
+                    button.hero__arrow.hero__arrow--prev(type="button")
+                        <svg width="35" height="15" viewBox="0 0 35 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.292893 6.65715C-0.0976295 7.04767 -0.0976296 7.68084 0.292892 8.07136L6.65685 14.4353C7.04738 14.8258 7.68054 14.8258 8.07107 14.4353C8.46159 14.0448 8.46159 13.4116 8.07107 13.0211L2.41422 7.36425L8.07107 1.7074C8.46159 1.31688 8.46159 0.683712 8.07107 0.293188C7.68054 -0.0973368 7.04738 -0.0973368 6.65686 0.293188L0.292893 6.65715ZM35 7.36426L35 6.36426L1 6.36425L1 7.36425L1 8.36425L35 8.36426L35 7.36426Z" fill="white" />
+                        </svg>
+                    button.hero__arrow.hero__arrow--next(type="button")
+                        <svg width="35" height="15" viewBox="0 0 35 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M34.7071 8.07136C35.0976 7.68084 35.0976 7.04768 34.7071 6.65715L28.3431 0.29319C27.9526 -0.0973344 27.3195 -0.0973344 26.9289 0.29319C26.5384 0.683714 26.5384 1.31688 26.9289 1.7074L32.5858 7.36426L26.9289 13.0211C26.5384 13.4116 26.5384 14.0448 26.9289 14.4353C27.3195 14.8259 27.9526 14.8259 28.3431 14.4353L34.7071 8.07136ZM0 7.36426V8.36426H34V7.36426V6.36426H0V7.36426Z" fill="white" />
+                        </svg>
+
+            img.hero__image-dc(src="./assets/img/Group 222.png", alt="")
+
+        .swiper-slide.hero__slide
+          .hero__image(style="background-image: url('./assets/img/Mask group (3).jpg')")
+          .hero__content
+            h1.hero__title Наградная продукция на заказ
+            p.hero__text Широкий ассортимент наградной продукции оригинального дизайна: кубков, медалей, призов, сувениров и эксклюзивной продукции для предстоящих событий и знаменательных дат.
+
+            .hero__controls
+                a.hero__button.btn.ui-button(href="#") В каталог
+
+                .hero__arrows
+                    button.hero__arrow.hero__arrow--prev(type="button")
+                        <svg width="35" height="15" viewBox="0 0 35 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.292893 6.65715C-0.0976295 7.04767 -0.0976296 7.68084 0.292892 8.07136L6.65685 14.4353C7.04738 14.8258 7.68054 14.8258 8.07107 14.4353C8.46159 14.0448 8.46159 13.4116 8.07107 13.0211L2.41422 7.36425L8.07107 1.7074C8.46159 1.31688 8.46159 0.683712 8.07107 0.293188C7.68054 -0.0973368 7.04738 -0.0973368 6.65686 0.293188L0.292893 6.65715ZM35 7.36426L35 6.36426L1 6.36425L1 7.36425L1 8.36425L35 8.36426L35 7.36426Z" fill="white" />
+                        </svg>
+                    button.hero__arrow.hero__arrow--next(type="button")
+                        <svg width="35" height="15" viewBox="0 0 35 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M34.7071 8.07136C35.0976 7.68084 35.0976 7.04768 34.7071 6.65715L28.3431 0.29319C27.9526 -0.0973344 27.3195 -0.0973344 26.9289 0.29319C26.5384 0.683714 26.5384 1.31688 26.9289 1.7074L32.5858 7.36426L26.9289 13.0211C26.5384 13.4116 26.5384 14.0448 26.9289 14.4353C27.3195 14.8259 27.9526 14.8259 28.3431 14.4353L34.7071 8.07136ZM0 7.36426V8.36426H34V7.36426V6.36426H0V7.36426Z" fill="white" />
+                        </svg>
+
+            img.hero__image-dc(src="./assets/img/Group 222.png", alt="")
+
+    //- Нижняя навигация
+    .hero__nav
+      button.hero__nav-item.active(type="button")
+        .hero__nav-img
+            img(src="./assets/img/Mask group (5).jpg", alt="")
+        .hero__nav-info
+          .hero__nav-num 01
+          .hero__nav-title Готовые и уникальные дизайны, персонализация продукции
+
+      button.hero__nav-item(type="button")
+        .hero__nav-img
+            img(src="./assets/img/Mask group (4).jpg", alt="")
+        .hero__nav-info
+          .hero__nav-num 02
+          .hero__nav-title Чёткая гравировка, цветная печать, нанесение логотипов
+
+      button.hero__nav-item(type="button")
+        .hero__nav-img
+            img(src="./assets/img/Mask group (6).jpg", alt="")
+        .hero__nav-info
+          .hero__nav-num 03
+          .hero__nav-title Быстрое изготовление продукции под заказ
+
+      button.hero__nav-item(type="button")
+        .hero__nav-img
+            img(src="./assets/img/image 7.png", alt="")
+        .hero__nav-info
+          .hero__nav-num 04
+          .hero__nav-title Доставка по РФ и странам СНГ за 1–7 дней
+
+      button.hero__nav-item(type="button")
+        .hero__nav-img
+            img(src="./assets/img/image 16.jpg", alt="")
+        .hero__nav-info
+          .hero__nav-num 05
+          .hero__nav-title Доступные розничные цены от ХХ руб.
+
+      button.hero__nav-item(type="button")
+        .hero__nav-img
+            img(src="./assets/img/Mask group (7).jpg", alt="")
+        .hero__nav-info
+          .hero__nav-num 06
+          .hero__nav-title Низкие оптовые цены, партнёрская программа
