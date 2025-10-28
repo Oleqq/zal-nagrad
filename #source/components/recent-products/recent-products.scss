@@ -13,6 +13,7 @@ h2.recent-product__title {
 }
 .recent-product {
     margin-bottom: 150px;
+    @include adaptiveValue(margin-bottom, 150px, 100px, 1920px, 767px);
 
     &__header {
         margin-bottom: 42px;

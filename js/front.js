@@ -197,3 +197,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cart = document.querySelector('.cart');
+
+  cart.addEventListener('click', e => {
+    if (e.target.closest('.cart-item__qty-btn')) {
+      const btn = e.target.closest('.cart-item__qty-btn');
+      const input = btn.parentElement.querySelector('.cart-item__qty-input');
+      let value = parseInt(input.value);
+
+      if (btn.dataset.action === 'increment') {
+        value++;
+      } else if (btn.dataset.action === 'decrement' && value > 1) {
+        value--;
+      }
+
+      input.value = value;
+    }
+
+    if (e.target.closest('.cart-item__remove')) {
+      const item = e.target.closest('.cart-item');
+      item.remove();
+    }
+  });
+});
