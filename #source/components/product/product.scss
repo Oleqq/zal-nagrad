@@ -1,0 +1,437 @@
+.section-product {
+  
+  padding-bottom: 100px;
+  @include adaptiveValue(padding-bottom, 100px, 60px, 1920px, 767px);
+}
+
+.product {
+  padding-top: 72px;
+  @include adaptiveValue(padding-top, 72px, 24px, 1920px, 767px);
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  @include adaptiveValue(gap, 100px, 50px, 1920px, 767px);
+
+  @media (max-width:1024px) {
+    flex-direction: column;
+  }
+
+  &__gallery {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    @include adaptiveValue(gap, 32px, 16px, 1920px, 1280px);
+
+    height: fit-content;
+
+    @media (max-width:1024px) {
+        flex-direction: column;
+        justify-content: center;
+
+    }
+  }
+
+  &__thumbs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @media (max-width:1024px) {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+
+  &__thumb {
+    width: 200px;
+    @include adaptiveValue(width, 200px, 100px, 1920px, 1280px);
+    height: 200px;
+    @include adaptiveValue(height, 200px, 100px, 1920px, 1280px);
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease, outline 0.2s ease;
+
+    @media (max-width:1024px) {
+        width: 150px;
+        @include adaptiveValue(width, 150px, 80px, 1024px, 467px);
+        height: 150px;
+        @include adaptiveValue(height, 150px, 80px, 1024px, 467px);
+    }
+
+    &--active,
+    &:hover {
+      opacity: 1;
+      outline: 2px solid #ffc107;
+    }
+  }
+
+  &__title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 70px;
+    @include adaptiveValue(font-size, 70px, 32px, 1920px, 767px);
+    line-height: 81%;
+    color: #1c1c1c;    
+
+    margin-bottom: 52px;
+    @include adaptiveValue(margin-bottom, 52px, 26px, 1920px, 767px);
+
+    @media (min-width:1025px) {
+        max-width: 720px;
+    }
+  }
+  &__articul {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 14px;
+    @include adaptiveValue(font-size, 14px, 12px, 1920px, 767px);
+    color: #1c1c1c;
+  }
+  &__sizes {
+
+    &-label {
+        font-family: var(--font-family);
+        font-weight: 300;
+        font-size: 14px;
+        @include adaptiveValue(font-size, 14px, 12px, 1920px, 767px);
+        color: #1c1c1c;
+    }
+
+    &-list {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 52px;
+        @include adaptiveValue(margin-bottom, 52px, 26px, 1920px, 767px);
+    }
+  }
+  &__size {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 16px;
+    @include adaptiveValue(font-size, 16px, 14px, 1920px, 767px);
+    text-align: center;
+    color: #1c1c1c;
+    background-color: transparent;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 86px;
+    @include adaptiveValue(width, 86px, 56px, 1920px, 1280px);
+    height: 58px;
+    @include adaptiveValue(height, 58px, 46px, 1920px, 1280px);
+
+    border: none;
+    outline: none;
+    background: rgba(28, 28, 28, 0.04);
+
+    transition: .2s ease;
+
+    &:hover {
+        transition: .2s ease;
+        background-color: #ffc242;
+    }
+  }
+
+    &__discount {
+        font-family: var(--font-family);
+        font-weight: 300;
+        font-size: 12px;
+        @include adaptiveValue(font-size, 12px, 10px, 1920px, 767px);
+        text-align: center;
+        color: #fff;
+        background-color: #000;
+        padding: 2px 6px;
+    }
+
+  &__main {
+    width: 600px;
+    @include adaptiveValue(width, 600px, 400px, 1920px, 767px);
+    height: 600px;
+    @include adaptiveValue(height, 600px, 400px, 1920px, 767px);
+    object-fit: contain;
+    border-radius: 8px;
+
+    @media (max-width:1024px) {
+        margin: 0 auto;
+        width: 500px;
+        height: 450px;
+        
+    }
+    @media (max-width:767px) {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 4 / 2.5;
+    }
+  }
+
+  &__info {
+    
+  }
+
+  &__labels {
+    display: flex;
+    gap: 8px;
+  }
+  
+  &__buttons {
+    display: flex;
+    gap: 8px;
+
+    
+    @media (max-width:1440px) {
+        flex-direction: column;
+    }
+    @media (max-width:767px) {
+        width: 100%;
+    }
+  }
+
+  &__quantity {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: fit-content;
+
+    
+
+    @include adaptiveValue(padding-top, 24px, 12px, 1920px, 1240px);
+    @include adaptiveValue(padding-right, 24px, 12px, 1920px, 1240px);
+    @include adaptiveValue(padding-bottom, 24px, 12px, 1920px, 1240px);
+    @include adaptiveValue(padding-left, 24px, 12px, 1920px, 1240px);
+    border: 1px solid #000;
+
+    @media (max-width: 1440px) {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    @media (max-width:767px) {
+        width: 100%;
+       
+    }
+
+    @media (max-width:567px) {
+        padding: 6px;
+    }
+    
+
+    &-btn {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #1c1c1c;
+
+        outline: none;
+        border: none;
+        background: transparent;
+
+        cursor: pointer;
+
+        
+
+      
+    }
+
+    &-input {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        @include adaptiveValue(font-size, 14px, 10px, 1920px, 767px);
+        text-transform: uppercase;
+        text-align: center;
+        color: #1c1c1c;
+        outline: none;
+        border: none;
+        background: transparent;
+
+        width: 80px;
+        @include adaptiveValue(width, 80px, 40px, 1920px, 767px);
+
+        @media (max-width:567px) {
+            width: 20px;
+        }
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+
+    &--sale {
+      background: #ffc107;
+    }
+
+    &--hit {
+      background: #000;
+      color: #fff;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 36px;
+    @include adaptiveValue(margin-bottom, 36px, 22px, 1920px, 767px);
+
+    &-old {
+      text-decoration: line-through;
+        font-family: var(--font-family);
+        font-weight: 300;
+        font-size: 24px;
+        @include adaptiveValue(font-size, 24px, 16px, 1920px, 767px);
+        text-transform: capitalize;
+        color: #bcbcbc;
+       
+    }
+
+    &-current {
+        font-family: var(--font-family);
+        font-weight: 300;
+        font-size: 24px;
+        @include adaptiveValue(font-size, 24px, 16px, 1920px, 767px);
+        text-transform: capitalize;
+        color: #000;
+    }
+
+    
+  }
+
+  &__cart {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 42px;
+    @include adaptiveValue(margin-bottom, 42px, 20px, 1920px, 767px);
+  }
+
+  &__btn {
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    @include adaptiveValue(font-size, 14px, 12px, 1920px, 767px);
+    text-transform: uppercase;
+    text-align: center;
+
+    width: 200px;
+    @include adaptiveValue(width, 200px, 150px, 1920px, 1440px);
+
+    @media (max-width:767px) {
+        width: 100%;
+    }
+
+
+    &--cart {
+      background: #ffc107;
+    }
+
+    &--fast {
+      background: #000;
+      color: #fff;
+    }
+  }
+
+  &__meta {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    margin-bottom: 56px;
+    @include adaptiveValue(margin-bottom, 56px, 24px, 1920px, 767px);  
+
+    .product__availability, .product__time {
+        display: flex;
+        justify-content: space-between;
+
+        span {
+
+            &:first-of-type {
+                font-family: var(--font-family);
+                font-weight: 300;
+                font-size: 14px;
+                @include adaptiveValue(gap, 14px, 12px, 1920px, 767px);
+                color: #9d9d9d;
+            }
+            &:last-of-type {
+                font-family: var(--font-family);
+                font-weight: 300;
+                font-size: 14px;
+                @include adaptiveValue(gap, 14px, 12px, 1920px, 767px);
+                text-align: right;
+                color: #1c1c1c;
+            }
+        }
+    }
+  }
+  .accordion:first-of-type {
+   
+  }
+}
+
+
+
+.accordion__list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 450px;
+
+    margin-bottom: 36px;
+    @include adaptiveValue(margin-bottom, 36px, 24px, 1920px, 767px);
+
+        li {
+            display: flex;
+            justify-content: space-between;
+
+
+            span {
+                &:first-of-type {
+                    font-family: var(--font-family);
+                    font-weight: 300;
+                    font-size: 14px;
+                    @include adaptiveValue(gap, 14px, 12px, 1920px, 767px);
+                    color: #9d9d9d;
+                }
+
+                &:last-of-type {
+                    font-family: var(--font-family);
+                    font-weight: 300;
+                    font-size: 14px;
+                    @include adaptiveValue(gap, 14px, 12px, 1920px, 767px);
+                    text-align: right;
+                    color: #1c1c1c;
+                }
+            }
+            
+            
+        }
+}
+
+.accordion__note {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 14px;
+    @include adaptiveValue(font-size, 14px, 12px, 1920px, 767px);
+    color: #1c1c1c;
+}
+
+.accordion-content-inner p {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 14px;
+    @include adaptiveValue(font-size, 14px, 12px, 1920px, 767px);
+    color: #1c1c1c;
+}

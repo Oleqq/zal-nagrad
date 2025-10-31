@@ -65,7 +65,8 @@ section.animated {
     flex-wrap: wrap;
 
     gap: 4px;
-    row-gap: 1rem;
+    row-gap: 16px;
+    @include adaptiveValue(row-gap, 16px, 8px, 1920px, 767px);
 
    
     

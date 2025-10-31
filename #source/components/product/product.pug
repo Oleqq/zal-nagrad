@@ -1,0 +1,118 @@
+section.section-product
+    .section-product__container
+        div.breadcrumbs
+            
+                        nav(aria-label="breadcrumb")
+                            ol.breadcrumbs__wrapper
+                                li.breadcrumbs__item
+                                    a.breadcrumbs__link.breadcrumbs__prev(href="/") Главная
+                                span.breadcrumbs__divider
+                                    | |
+                                li.breadcrumbs__item
+                                    a.breadcrumbs__link.breadcrumbs__prev(href="/") Каталог
+                                
+                                span.breadcrumbs__divider
+                                    | |
+
+                                li.breadcrumbs__item
+                                    a.breadcrumbs__link.breadcrumbs__prev(href="/") Кубки
+                                
+                                span.breadcrumbs__divider
+                                    | |
+                                li.breadcrumbs__item
+                                    a.breadcrumbs__link.breadcrumbs__prev(href="/") Кубки металлические
+                                
+                                span.breadcrumbs__divider
+                                    | |
+
+                                li.breadcrumbs__item
+                                    span.breadcrumbs__current Кубок престижный металлический
+        .product
+            .product__gallery
+                .product__thumbs
+                    img.product__thumb(src="./assets/img/image 8.jpg" alt="Кубок Престижный металлический")
+                    img.product__thumb(src="./assets/img/Mask group 222.png" alt="Кубок Престижный металлический")
+                    img.product__thumb(src="./assets/img/Mask group 333.png" alt="Кубок Престижный металлический")
+                img.product__main(src="./assets/img/image 8.jpg" alt="Кубок Престижный металлический")
+
+            .product__info
+                .product__labels
+                //- span.product__label.product__label--sale Акция
+                //- span.product__label.product__label--hit Хит
+                span.product__articul KM2767
+                h1.product__title Кубок Престижный Металлический
+                
+
+                .product__sizes
+                span.product__sizes-label Высота (см):
+                .product__sizes-list
+                    button.product__size 52
+                    button.product__size 47,5
+                    button.product__size 41,5
+
+                .product__price
+                    span.product__price-old 3 469
+                    span.product__price-current 2 120 ₽/Шт
+                    span.product__discount -15%
+
+                .product__cart
+                    .product__buttons
+                        .product__quantity
+                            button.product__quantity-btn -
+                            input.product__quantity-input(type="text" value="1")
+                            button.product__quantity-btn +
+                        button.product__btn.product__btn--cart В корзину
+                        button.product__btn.product__btn--fast В 1 клик
+
+                .product__meta
+                    .product__availability
+                        span Наличие:
+                        span.product__availability--many Много
+                    .product__time
+                        span Срок изготовления:
+                        span 3 дня
+                 
+                .accordion
+                    input.toggle#accordion-characteristics(type='checkbox' checked)
+                    label.accordion-header.accordion-toggle(for='accordion-characteristics')
+                        span Характеристика
+                    .accordion-content
+                        .accordion-content-inner
+                            ul.accordion__list
+                                li
+                                    span Материал чаши
+                                    span металл
+                                li
+                                    span Материал основания
+                                    span пластик
+                                li
+                                    span Ручки
+                                    span да
+                                li
+                                    span Основной цвет
+                                    span золото, серебро
+                                li
+                                    span Высота, см
+                                    span 52
+                                li
+                                    span Диаметр чаши, см
+                                    span 20
+                                li
+                                    span Размер таблички, мм
+                                    span 105×45
+                                li
+                                    span Крышка
+                                    span KR1-200, KR2-200
+                                li
+                                    span Назначение
+                                    span спортивный
+                            p.accordion__note * Реальная высота кубка может отличаться на +/- 1 см.
+                            p.accordion__note ** В составе кубка могут быть использованы элементы различных оттенков одного цвета.
+
+                .accordion
+                    input.toggle#accordion-description(type='checkbox')
+                    label.accordion-header.accordion-toggle(for='accordion-description')
+                        span Описание
+                    .accordion-content
+                        .accordion-content-inner
+                            p Здесь можно добавить текстовое описание товара — например, особенности дизайна, материалы или преимущества.

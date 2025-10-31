@@ -2,6 +2,7 @@
 
     &-card {
         padding: 26px;
+            text-decoration: none !important;
 
         @media (max-width:767px) {
             padding: 13px;

@@ -275,3 +275,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+
+
+
+// product
+document.addEventListener('DOMContentLoaded', () => {
+  const mainImg = document.querySelector('.product__main');
+  const thumbs = document.querySelectorAll('.product__thumb');
+
+  if (!mainImg || !thumbs.length) return;
+
+  thumbs.forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      // Удаляем активный класс у всех превью
+      thumbs.forEach(t => t.classList.remove('product__thumb--active'));
+
+      // Добавляем активный кликнутому
+      thumb.classList.add('product__thumb--active');
+
+      // Меняем главное изображение
+      mainImg.src = thumb.src;
+      mainImg.alt = thumb.alt;
+    });
+  });
+});
